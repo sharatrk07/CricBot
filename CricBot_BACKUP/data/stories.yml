@@ -1,0 +1,618 @@
+# stories.yml
+version: "3.1"
+
+stories:
+  - story: greet path
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: how are you path
+    steps:
+      - intent: ask_how_are_you
+      - action: utter_how_are_you
+      - intent: mood_great
+      - action: utter_mood_great
+
+  - story: sad mood path
+    steps:
+      - intent: ask_how_are_you
+      - action: utter_how_are_you
+      - intent: mood_unhappy
+      - action: utter_mood_unhappy
+
+  - story: ask name path
+    steps:
+      - intent: ask_name
+      - action: utter_name
+
+  - story: ask capabilities path
+    steps:
+      - intent: ask_capabilities
+      - action: utter_capabilities
+
+  - story: help path
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - story: thanks path
+    steps:
+      - intent: thankyou
+      - action: utter_thankyou
+
+  - story: affirm path
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+
+  - story: deny path
+    steps:
+      - intent: deny
+      - action: utter_deny
+
+  - story: goodbye path
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: greet and ask capabilities
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_capabilities
+      - action: utter_capabilities
+
+  - story: greet and ask name
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_name
+      - action: utter_name
+
+  - story: ask help then thank
+    steps:
+      - intent: help
+      - action: utter_help
+      - intent: thankyou
+      - action: utter_thankyou
+
+  - story: greet and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask capabilities then thank
+    steps:
+      - intent: ask_capabilities
+      - action: utter_capabilities
+      - intent: thankyou
+      - action: utter_thankyou
+
+  - story: ask capabilities then goodbye
+    steps:
+      - intent: ask_capabilities
+      - action: utter_capabilities
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Group 1: Cricket/IPL Specific Stories
+  - story: Ask for 20 to 50 consecutive innings
+    steps:
+      - intent: ask_20_to_50_consecutive_innings
+      - action: action_20_to_50_consecutive_innings
+
+  - story: Ask for 30 to 50 consecutive innings
+    steps:
+      - intent: ask_30_to_50_consecutive_innings
+      - action: action_30_to_50_consecutive_innings
+
+  - story: Ask for 40 to 50 consecutive innings
+    steps:
+      - intent: ask_40_to_50_consecutive_innings
+      - action: action_40_to_50_consecutive_innings
+
+  - story: Ask for 50 on debut
+    steps:
+      - intent: ask_50_on_debut
+      - action: action_50_on_debut
+
+  - story: Ask for batsman dismissed on 1st ball
+    steps:
+      - intent: ask_batsman_dismiss_1st_ball
+      - action: action_batsman_dismiss_1st_ball
+
+  - story: Ask for first 50 innings count
+    steps:
+      - intent: ask_first_50_innings_count
+      - action: action_first_50_innings_count
+
+  - story: Ask for highest strike rate innings
+    steps:
+      - intent: ask_highest_strike_rate_innings
+      - action: action_highest_strike_rate_innings
+
+  - story: Ask for innings to first 100
+    steps:
+      - intent: ask_innings_to_1st_100
+      - action: action_innings_to_1st_100
+
+  - story: Ask for openers 50 and duck
+    steps:
+      - intent: ask_openers_50_and_duck
+      - action: action_openers_50_and_duck
+
+  - story: Ask for opening pairs 50+ partnerships
+    steps:
+      - intent: ask_opening_pairs_50_plus_partnerships
+      - action: action_opening_pairs_50_partnerships
+
+  - story: Ask for scoring 99 in innings
+    steps:
+      - intent: ask_scoring_99_an_innings
+      - action: action_scoring_99_an_innings
+
+  - story: Ask for top scorers by position
+    steps:
+      - intent: ask_top_scorers_by_position
+      - action: action_top_scorers_by_position
+
+  - story: Ask for yearwise highest averages
+    steps:
+      - intent: ask_yearwise_highest_averages
+      - action: action_yearwise_highest_averages
+
+  # Group 2: Collection Data Stories
+  - story: Ask for 1000 to 8000 runs
+    steps:
+      - intent: ask_1000_to_8000_runs
+      - action: action_1000_to_8000_runs
+
+  - story: Ask for best strike rate
+    steps:
+      - intent: ask_best_strike_rate
+      - action: action_best_strike_rate
+
+  - story: Ask for career partnerships
+    steps:
+      - intent: ask_career_partnerships
+      - action: action_career_partnerships
+
+  - story: Ask for fastest centuries
+    steps:
+      - intent: ask_fastest_centuries
+      - action: action_fastest_centuries
+
+  - story: Ask for fastest fifties
+    steps:
+      - intent: ask_fastest_fifties
+      - action: action_fastest_fifties
+
+  - story: Ask for fastest milestone runs
+    steps:
+      - intent: ask_fastest_milestone_runs
+      - action: action_fastest_milestone_runs
+
+  - story: Ask for highest scores innings
+    steps:
+      - intent: ask_highest_scores_innings
+      - action: action_highest_scores_innings
+
+  - story: Ask for highest strike rate all time
+    steps:
+      - intent: ask_highest_strike_rates_all_time
+      - action: action_highest_strike_rates_all_time
+
+  - story: Ask for most centuries
+    steps:
+      - intent: ask_most_centuries
+      - action: action_most_centuries
+
+  - story: Ask for most fifties
+    steps:
+      - intent: ask_most_fifties
+      - action: action_most_fifties
+
+  - story: Ask for most runs from boundaries
+    steps:
+      - intent: ask_most_runs_from_boundaries
+      - action: action_most_runs_from_boundaries
+
+  - story: Ask for most runs overall
+    steps:
+      - intent: ask_most_runs_overall
+      - action: action_most_runs_overall
+
+  - story: Ask for most sixes all time
+    steps:
+      - intent: ask_most_sixes_all_time
+      - action: action_most_sixes_all_time
+
+  - story: Ask for most sixes 2008 to 2024
+    steps:
+      - intent: ask_most_sixes_2008_2024
+      - action: action_most_sixes_2008_2024
+
+  - story: Ask for most boundary runs
+    steps:
+      - intent: ask_most_boundary_runs
+      - action: action_most_boundary_runs
+
+  - story: Ask for most runs in playoffs
+    steps:
+      - intent: ask_most_runs_in_playoffs
+      - action: action_most_runs_in_playoffs
+
+  - story: Ask for best batting averages
+    steps:
+      - intent: ask_best_batting_averages
+      - action: action_best_batting_averages
+
+  - story: Ask for best batting strike rates
+    steps:
+      - intent: ask_best_batting_strike_rates
+      - action: action_best_batting_strike_rates
+
+  # Group 5: Bowler Data Stories
+  - story: Ask for best economy rate innings
+    steps:
+      - intent: ask_best_economy_rates_innings
+      - action: action_best_economy_rates_innings
+
+  - story: Ask for best bowler strike rate
+    steps:
+      - intent: ask_bowler_best_strike_rate
+      - action: action_bowler_best_strike_rate
+
+  - story: Ask for bowler dismissal records
+    steps:
+      - intent: ask_bowler_dismissal_records
+      - action: action_bowler_dismissal_records
+
+  - story: Ask for fastest player to 50 wickets
+    steps:
+      - intent: ask_fastest_player_50_wickets
+      - action: action_fastest_player_50_wickets
+
+  - story: Ask for first ball wicket records
+    steps:
+      - intent: ask_first_ball_wicket
+      - action: action_first_ball_wicket
+
+  - story: Ask for IPL bowlers data 2008-2024
+    steps:
+      - intent: ask_ipl_bowlers_data_2008_2024
+      - action: action_ipl_bowlers_data_2008_2024
+
+  - story: Ask for IPL hat-trick records
+    steps:
+      - intent: ask_ipl_hat_tricks
+      - action: action_ipl_hat_tricks
+
+  - story: Ask for lowest bowling averages
+    steps:
+      - intent: ask_lowest_averages
+      - action: action_lowest_averages
+
+  - story: Ask for most runs conceded by a bowler
+    steps:
+      - intent: ask_most_runs_conceded
+      - action: action_most_runs_conceded
+
+  - story: Ask for most runs from 2008 to 2024
+    steps:
+      - intent: ask_most_runs_2008_2024
+      - action: action_most_runs_2008_2024
+
+  - story: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: Goodbye to the user
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Group 6: Player and IPL data
+  - story: Ask for all players records
+    steps:
+      - intent: ask_all_players_records
+      - action: action_all_players_records
+
+  - story: Ask for auctioneers
+    steps:
+      - intent: ask_auctioneers
+      - action: action_auctioneers
+
+  - story: Ask for cap holders
+    steps:
+      - intent: ask_cap_holders
+      - action: action_cap_holders
+
+  - story: Ask for coaches overall
+    steps:
+      - intent: ask_coaches_overall
+      - action: action_coaches_overall
+
+  - story: Ask for grounds records
+    steps:
+      - intent: ask_grounds_records
+      - action: action_grounds_records
+
+  - story: Ask for highest catches
+    steps:
+      - intent: ask_highest_catches
+      - action: action_highest_catches
+
+  - story: Ask for IPL captains records
+    steps:
+      - intent: ask_ipl_captains_records
+      - action: action_ipl_captains_records
+
+  - story: Ask for IPL players overall data
+    steps:
+      - intent: ask_ipl_players_overall_data
+      - action: action_ipl_players_overall_data
+
+  - story: Ask for IPL team captains records
+    steps:
+      - intent: ask_ipl_team_captains_records
+      - action: action_ipl_team_captains_records
+
+  - story: Ask for most catch in an innings
+    steps:
+      - intent: ask_most_catch_in_an_innings
+      - action: action_most_catch_in_an_innings
+
+  - story: Ask for most ducks in career
+    steps:
+      - intent: ask_most_ducks_in_career
+      - action: action_most_ducks_in_career
+
+  - story: Ask for tied matches
+    steps:
+      - intent: ask_tied_matches
+      - action: action_tied_matches
+
+  - story: Ask for top allrounders
+    steps:
+      - intent: ask_top_allrounders
+      - action: action_top_allrounders
+
+  - story: Ask for umpire data
+    steps:
+      - intent: ask_umpire_data
+      - action: action_umpire_data
+
+# Group 10
+
+  - story: Ask for all IPL match data yearwise
+    steps:
+      - intent: ask_all_ipl_match_data_yearwise
+      - action: action_all_ipl_match_data_yearwise
+
+  - story: Ask for team performance yearwise
+    steps:
+      - intent: ask_team_performance_yearwise
+      - action: action_team_performance_yearwise
+
+  - story: Ask for close matches by wickets
+    steps:
+      - intent: ask_close_matches_by_wickets
+      - action: action_close_matches_by_wickets
+
+  - story: Ask for end moment finish
+    steps:
+      - intent: ask_end_moment_finish
+      - action: action_end_moment_finish
+
+  - story: Ask for highest match total scores
+    steps:
+      - intent: ask_highest_match_total_scores
+      - action: action_highest_match_total_scores
+
+  - story: Ask for highest partnerships
+    steps:
+      - intent: ask_highest_partnerships
+      - action: action_highest_partnerships
+
+  - story: Ask for highest run chase
+    steps:
+      - intent: ask_highest_run_chase
+      - action: action_highest_run_chase
+
+  - story: Ask for highest scores teamwise
+    steps:
+      - intent: ask_highest_scores_teamwise
+      - action: action_highest_scores_teamwise
+
+  - story: Ask for highest scores
+    steps:
+      - intent: ask_highest_scores
+      - action: action_highest_scores
+
+  - story: Ask for highest successful run chases
+    steps:
+      - intent: ask_highest_successful_run_chases
+      - action: action_highest_successful_run_chases
+
+  - story: Ask for IPL points table
+    steps:
+      - intent: ask_ipl_points_table
+      - action: action_ipl_points_table
+
+  - story: Ask for lowest scores IPL
+    steps:
+      - intent: ask_lowest_scores_ipl
+      - action: action_lowest_scores_ipl
+
+  - story: Ask for lowest scores teamwise
+    steps:
+      - intent: ask_lowest_scores_teamwise
+      - action: action_lowest_scores_teamwise
+
+  - story: Ask for one-sided finish
+    steps:
+      - intent: ask_one_sided_finish
+      - action: action_one_sided_finish
+
+  - story: Ask for top partnerships by team
+    steps:
+      - intent: ask_top_partnerships_by_team
+      - action: action_top_partnerships_by_team
+
+# Group 8
+
+  - story: Ask for team matches
+    steps:
+      - intent: ask_team_matches
+      - action: action_team_matches
+
+  - story: Ask for team performance against opponent
+    steps:
+      - intent: ask_team_performance_against_opponent
+      - action: action_team_performance_against_opponent
+
+  - story: Ask for team performance at venue
+    steps:
+      - intent: ask_team_performance_at_venue
+      - action: action_team_performance_at_venue
+
+  - story: Ask for team season performance
+    steps:
+      - intent: ask_team_season_performance
+      - action: action_team_season_performance
+
+  - story: Ask for team win percentage
+    steps:
+      - intent: ask_team_win_percentage
+      - action: action_team_win_percentage
+
+  - story: Ask for head to head
+    steps:
+      - intent: ask_head_to_head
+      - action: action_head_to_head
+
+  - story: Ask for most successful team
+    steps:
+      - intent: ask_most_successful_team
+      - action: action_most_successful_team
+
+  - story: Ask for team results by year
+    steps:
+      - intent: ask_team_results_by_year
+      - action: action_team_results_by_year
+
+  - story: Ask for team home away performance
+    steps:
+      - intent: ask_team_home_away_performance
+      - action: action_team_home_away_performance
+
+
+  # Group 9
+
+  - story: Ask for team ground performance
+    steps:
+      - intent: ask_team_ground_performance
+      - action: action_team_ground_performance
+
+  - story: Ask for team opponent record
+    steps:
+      - intent: ask_team_opponent_record
+      - action: action_team_opponent_record
+
+  - story: Ask for team overall record
+    steps:
+      - intent: ask_team_overall_record
+      - action: action_team_overall_record
+
+  - story: Ask for team home ground record
+    steps:
+      - intent: ask_team_home_ground_record
+      - action: action_team_home_ground_record
+
+  - story: Ask for team performance by opponent
+    steps:
+      - intent: ask_team_performance_by_opponent
+      - action: action_team_performance_by_opponent
+
+  - story: Ask for team no result matches
+    steps:
+      - intent: ask_team_no_result_matches
+      - action: action_team_no_result_matches
+
+  - story: Ask for head to head by ground
+    steps:
+      - intent: ask_head_to_head_by_ground
+      - action: action_head_to_head_by_ground
+
+  - story: Ask for most dominant team at venue
+    steps:
+      - intent: ask_most_dominant_team_at_venue
+      - action: action_most_dominant_team_at_venue
+
+
+# Group 3
+  - story: Ask for player impact by season
+    steps:
+      - intent: ask_player_impact_by_season
+      - action: action_player_impact_by_season
+
+  - story: Ask for wicketkeeper highest scores
+    steps:
+      - intent: ask_wicketkeeper_highest_scores
+      - action: action_wicketkeeper_highest_scores
+
+  - story: Ask for wicketkeeper most dismissals in an innings
+    steps:
+      - intent: ask_wicketkeeper_most_dismissals_innings
+      - action: action_wicketkeeper_most_dismissals_innings
+
+  - story: Ask for wicketkeeper overall records
+    steps:
+      - intent: ask_wicketkeeper_overall_records
+      - action: action_wicketkeeper_overall_records
+
+# Group 4
+  - story: Ask for bowler impact by year
+    steps:
+      - intent: ask_bowler_impact_by_year
+      - action: action_bowler_impact_by_year
+
+  - story: Ask for most 4 wickets innings
+    steps:
+      - intent: ask_most_4_wickets_innings
+      - action: action_most_4_wickets_innings
+
+  - story: Ask for most economical bowlers
+    steps:
+      - intent: ask_most_economical
+      - action: action_most_economical
+
+  - story: Ask for most wickets in first 50 matches
+    steps:
+      - intent: ask_most_wickets_1st_50_matches
+      - action: action_most_wickets_1st_50_matches
+
+  - story: Ask for most wickets in consecutive matches
+    steps:
+      - intent: ask_most_wickets_consecutive_matches
+      - action: action_most_wickets_consecutive_matches
+
+  - story: Ask for most wickets in IPL
+    steps:
+      - intent: ask_most_wickets_in_ipl
+      - action: action_most_wickets_in_ipl
+
+  - story: Ask for most wickets in an innings
+    steps:
+      - intent: ask_most_wickets_innings
+      - action: action_most_wickets_innings
+
+  - story: Default response story
+    steps:
+      - intent: nlu_fallback
+      - action: action_fallback

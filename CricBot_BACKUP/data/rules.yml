@@ -1,0 +1,575 @@
+# rules.yml
+version: "3.1"
+
+rules:
+  - rule: respond to greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: respond how are you
+    steps:
+      - intent: ask_how_are_you
+      - action: utter_how_are_you
+
+  - rule: respond mood great
+    steps:
+      - intent: mood_great
+      - action: utter_mood_great
+
+  - rule: respond mood unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_mood_unhappy
+
+  - rule: respond ask name
+    steps:
+      - intent: ask_name
+      - action: utter_name
+
+  - rule: respond ask capabilities
+    steps:
+      - intent: ask_capabilities
+      - action: utter_capabilities
+
+  - rule: respond help
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - rule: respond thankyou
+    steps:
+      - intent: thankyou
+      - action: utter_thankyou
+
+  - rule: respond affirm
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+
+  - rule: respond deny
+    steps:
+      - intent: deny
+      - action: utter_deny
+      
+  - rule: respond goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+
+  # Group 1: Cricket/IPL Specific Rules
+  - rule: ask_20_to_50_consecutive_innings
+    steps:
+      - intent: ask_20_to_50_consecutive_innings
+      - action: action_20_to_50_consecutive_innings
+
+  - rule: ask_30_to_50_consecutive_innings
+    steps:
+      - intent: ask_30_to_50_consecutive_innings
+      - action: action_30_to_50_consecutive_innings
+
+  - rule: ask_40_to_50_consecutive_innings
+    steps:
+      - intent: ask_40_to_50_consecutive_innings
+      - action: action_40_to_50_consecutive_innings
+
+  - rule: ask_50_on_debut
+    steps:
+      - intent: ask_50_on_debut
+      - action: action_50_on_debut
+
+  - rule: ask_batsman_dismiss_1st_ball
+    steps:
+      - intent: ask_batsman_dismiss_1st_ball
+      - action: action_batsman_dismiss_1st_ball
+
+  - rule: ask_first_50_innings_count
+    steps:
+      - intent: ask_first_50_innings_count
+      - action: action_first_50_innings_count
+
+  - rule: ask_highest_strike_rate_innings
+    steps:
+      - intent: ask_highest_strike_rate_innings
+      - action: action_highest_strike_rate_innings
+
+  - rule: ask_innings_to_1st_100
+    steps:
+      - intent: ask_innings_to_1st_100
+      - action: action_innings_to_1st_100
+
+  - rule: ask_openers_50_and_duck
+    steps:
+      - intent: ask_openers_50_and_duck
+      - action: action_openers_50_and_duck
+
+  - rule: ask_opening_pairs_50_plus_partnerships
+    steps:
+      - intent: ask_opening_pairs_50_plus_partnerships
+      - action: action_opening_pairs_50_partnerships
+
+  - rule: ask_scoring_99_an_innings
+    steps:
+      - intent: ask_scoring_99_an_innings
+      - action: action_scoring_99_an_innings
+
+  - rule: ask_top_scorers_by_position
+    steps:
+      - intent: ask_top_scorers_by_position
+      - action: action_top_scorers_by_position
+
+  - rule: ask_yearwise_highest_averages
+    steps:
+      - intent: ask_yearwise_highest_averages
+      - action: action_yearwise_highest_averages
+
+  # Group 2: Cricket/IPL Specific Rules
+  - rule: ask_1000_to_8000_runs
+    steps:
+      - intent: ask_1000_to_8000_runs
+      - action: action_1000_to_8000_runs
+
+  - rule: ask_best_strike_rate
+    steps:
+      - intent: ask_best_strike_rate
+      - action: action_best_strike_rate
+
+  - rule: ask_career_partnerships
+    steps:
+      - intent: ask_career_partnerships
+      - action: action_career_partnerships
+
+  - rule: ask_fastest_centuries
+    steps:
+      - intent: ask_fastest_centuries
+      - action: action_fastest_centuries
+
+  - rule: ask_fastest_fifties
+    steps:
+      - intent: ask_fastest_fifties
+      - action: action_fastest_fifties
+
+  - rule: ask_fastest_milestone_runs
+    steps:
+      - intent: ask_fastest_milestone_runs
+      - action: action_fastest_milestone_runs
+
+  - rule: ask_highest_scores_innings
+    steps:
+      - intent: ask_highest_scores_innings
+      - action: action_highest_scores_innings
+
+  - rule: ask_highest_strike_rates_all_time
+    steps:
+      - intent: ask_highest_strike_rates_all_time
+      - action: action_highest_strike_rates_all_time
+
+  - rule: ask_most_centuries
+    steps:
+      - intent: ask_most_centuries
+      - action: action_most_centuries
+
+  - rule: ask_most_fifties
+    steps:
+      - intent: ask_most_fifties
+      - action: action_most_fifties
+
+  - rule: ask_most_runs_from_boundaries
+    steps:
+      - intent: ask_most_runs_from_boundaries
+      - action: action_most_runs_from_boundaries
+
+  - rule: ask_most_runs_overall
+    steps:
+      - intent: ask_most_runs_overall
+      - action: action_most_runs_overall
+
+  - rule: ask_most_sixes_all_time
+    steps:
+      - intent: ask_most_sixes_all_time
+      - action: action_most_sixes_all_time
+
+  - rule: ask_most_sixes_2008_2024
+    steps:
+      - intent: ask_most_sixes_2008_2024
+      - action: action_most_sixes_2008_2024
+
+  - rule: ask_most_boundary_runs
+    steps:
+      - intent: ask_most_boundary_runs
+      - action: action_most_boundary_runs
+
+  - rule: ask_most_runs_in_playoffs
+    steps:
+      - intent: ask_most_runs_in_playoffs
+      - action: action_most_runs_in_playoffs
+
+  - rule: ask_best_batting_averages
+    steps:
+      - intent: ask_best_batting_averages
+      - action: action_best_batting_averages
+
+  - rule: ask_best_batting_strike_rates
+    steps:
+      - intent: ask_best_batting_strike_rates
+      - action: action_best_batting_strike_rates
+
+  # Group 5: Bowler Data Rules
+  - rule: ask_best_economy_rates_innings
+    steps:
+      - intent: ask_best_economy_rates_innings
+      - action: action_best_economy_rates_innings
+
+  - rule: ask_bowler_best_strike_rate
+    steps:
+      - intent: ask_bowler_best_strike_rate
+      - action: action_bowler_best_strike_rate
+
+  - rule: ask_bowler_dismissal_records
+    steps:
+      - intent: ask_bowler_dismissal_records
+      - action: action_bowler_dismissal_records
+
+  - rule: ask_fastest_player_50_wickets
+    steps:
+      - intent: ask_fastest_player_50_wickets
+      - action: action_fastest_player_50_wickets
+
+  - rule: ask_first_ball_wicket
+    steps:
+      - intent: ask_first_ball_wicket
+      - action: action_first_ball_wicket
+
+  - rule: ask_ipl_bowlers_data_2008_2024
+    steps:
+      - intent: ask_ipl_bowlers_data_2008_2024
+      - action: action_ipl_bowlers_data_2008_2024
+
+  - rule: ask_ipl_hat_tricks
+    steps:
+      - intent: ask_ipl_hat_tricks
+      - action: action_ipl_hat_tricks
+
+  - rule: ask_lowest_averages
+    steps:
+      - intent: ask_lowest_averages
+      - action: action_lowest_averages
+
+  - rule: ask_most_runs_conceded
+    steps:
+      - intent: ask_most_runs_conceded
+      - action: action_most_runs_conceded
+
+  - rule: ask_most_runs_2008_2024
+    steps:
+      - intent: ask_most_runs_2008_2024
+      - action: action_most_runs_2008_2024
+
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Goodbye to the user
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Group 6: Player and IPL Records Actions
+  - rule: ask_all_players_records
+    steps:
+      - intent: ask_all_players_records
+      - action: action_all_players_records
+
+  - rule: ask_auctioneers
+    steps:
+      - intent: ask_auctioneers
+      - action: action_auctioneers
+
+  - rule: ask_cap_holders
+    steps:
+      - intent: ask_cap_holders
+      - action: action_cap_holders
+
+  - rule: ask_coaches_overall
+    steps:
+      - intent: ask_coaches_overall
+      - action: action_coaches_overall
+
+  - rule: ask_grounds_records
+    steps:
+      - intent: ask_grounds_records
+      - action: action_grounds_records
+
+  - rule: ask_highest_catches
+    steps:
+      - intent: ask_highest_catches
+      - action: action_highest_catches
+
+  - rule: ask_ipl_captains_records
+    steps:
+      - intent: ask_ipl_captains_records
+      - action: action_ipl_captains_records
+
+  - rule: ask_ipl_players_overall_data
+    steps:
+      - intent: ask_ipl_players_overall_data
+      - action: action_ipl_players_overall_data
+
+  - rule: ask_ipl_team_captains_records
+    steps:
+      - intent: ask_ipl_team_captains_records
+      - action: action_ipl_team_captains_records
+
+  - rule: ask_most_catch_in_an_innings
+    steps:
+      - intent: ask_most_catch_in_an_innings
+      - action: action_most_catch_in_an_innings
+
+  - rule: ask_most_ducks_in_career
+    steps:
+      - intent: ask_most_ducks_in_career
+      - action: action_most_ducks_in_career
+
+  - rule: ask_tied_matches
+    steps:
+      - intent: ask_tied_matches
+      - action: action_tied_matches
+
+  - rule: ask_top_allrounders
+    steps:
+      - intent: ask_top_allrounders
+      - action: action_top_allrounders
+
+  - rule: ask_umpire_data
+    steps:
+      - intent: ask_umpire_data
+      - action: action_umpire_data
+
+# Group 10
+
+  - rule: Ask for all IPL match data yearwise
+    steps:
+      - intent: ask_all_ipl_match_data_yearwise
+      - action: action_all_ipl_match_data_yearwise
+
+  - rule: Ask for team performance yearwise
+    steps:
+      - intent: ask_team_performance_yearwise
+      - action: action_team_performance_yearwise
+
+  - rule: Ask for close matches by wickets
+    steps:
+      - intent: ask_close_matches_by_wickets
+      - action: action_close_matches_by_wickets
+
+  - rule: Ask for end moment finish
+    steps:
+      - intent: ask_end_moment_finish
+      - action: action_end_moment_finish
+
+  - rule: Ask for highest match total scores
+    steps:
+      - intent: ask_highest_match_total_scores
+      - action: action_highest_match_total_scores
+
+  - rule: Ask for highest partnerships
+    steps:
+      - intent: ask_highest_partnerships
+      - action: action_highest_partnerships
+
+  - rule: Ask for highest run chase
+    steps:
+      - intent: ask_highest_run_chase
+      - action: action_highest_run_chase
+
+  - rule: Ask for highest scores teamwise
+    steps:
+      - intent: ask_highest_scores_teamwise
+      - action: action_highest_scores_teamwise
+
+  - rule: Ask for highest scores
+    steps:
+      - intent: ask_highest_scores
+      - action: action_highest_scores
+
+  - rule: Ask for highest successful run chases
+    steps:
+      - intent: ask_highest_successful_run_chases
+      - action: action_highest_successful_run_chases
+
+  - rule: Ask for IPL points table
+    steps:
+      - intent: ask_ipl_points_table
+      - action: action_ipl_points_table
+
+  - rule: Ask for lowest scores IPL
+    steps:
+      - intent: ask_lowest_scores_ipl
+      - action: action_lowest_scores_ipl
+
+  - rule: Ask for lowest scores teamwise
+    steps:
+      - intent: ask_lowest_scores_teamwise
+      - action: action_lowest_scores_teamwise
+
+  - rule: Ask for one-sided finish
+    steps:
+      - intent: ask_one_sided_finish
+      - action: action_one_sided_finish
+
+  - rule: Ask for top partnerships by team
+    steps:
+      - intent: ask_top_partnerships_by_team
+      - action: action_top_partnerships_by_team
+
+  # Group 8: Team Match Results Actions
+  - rule: ask_team_matches
+    steps:
+      - intent: ask_team_matches
+      - action: action_team_matches
+
+  - rule: ask_team_performance_against_opponent
+    steps:
+      - intent: ask_team_performance_against_opponent
+      - action: action_team_performance_against_opponent
+
+  - rule: ask_team_performance_at_venue
+    steps:
+      - intent: ask_team_performance_at_venue
+      - action: action_team_performance_at_venue
+
+  - rule: ask_team_season_performance
+    steps:
+      - intent: ask_team_season_performance
+      - action: action_team_season_performance
+
+  - rule: ask_team_win_percentage
+    steps:
+      - intent: ask_team_win_percentage
+      - action: action_team_win_percentage
+
+  - rule: ask_head_to_head
+    steps:
+      - intent: ask_head_to_head
+      - action: action_head_to_head
+
+  - rule: ask_most_successful_team
+    steps:
+      - intent: ask_most_successful_team
+      - action: action_most_successful_team
+
+  - rule: ask_team_results_by_year
+    steps:
+      - intent: ask_team_results_by_year
+      - action: action_team_results_by_year
+
+  - rule: ask_team_home_away_performance
+    steps:
+      - intent: ask_team_home_away_performance
+      - action: action_team_home_away_performance
+
+  - rule: Ask for team ground performance
+    steps:
+      - intent: ask_team_ground_performance
+      - action: action_team_ground_performance
+
+  - rule: Ask for team opponent record
+    steps:
+      - intent: ask_team_opponent_record
+      - action: action_team_opponent_record
+
+  - rule: Ask for team overall record
+    steps:
+      - intent: ask_team_overall_record
+      - action: action_team_overall_record
+
+  - rule: Ask for team home ground record
+    steps:
+      - intent: ask_team_home_ground_record
+      - action: action_team_home_ground_record
+
+  - rule: Ask for team performance by opponent
+    steps:
+      - intent: ask_team_performance_by_opponent
+      - action: action_team_performance_by_opponent
+
+  - rule: Ask for team no result matches
+    steps:
+      - intent: ask_team_no_result_matches
+      - action: action_team_no_result_matches
+
+  - rule: Ask for head to head by ground
+    steps:
+      - intent: ask_head_to_head_by_ground
+      - action: action_head_to_head_by_ground
+
+  - rule: Ask for most dominant team at venue
+    steps:
+      - intent: ask_most_dominant_team_at_venue
+      - action: action_most_dominant_team_at_venue
+
+
+# Group 3
+  - rule: ask_player_impact_by_season
+    steps:
+      - intent: ask_player_impact_by_season
+      - action: action_player_impact_by_season
+
+  - rule: ask_wicketkeeper_highest_scores
+    steps:
+      - intent: ask_wicketkeeper_highest_scores
+      - action: action_wicketkeeper_highest_scores
+
+  - rule: ask_wicketkeeper_most_dismissals_innings
+    steps:
+      - intent: ask_wicketkeeper_most_dismissals_innings
+      - action: action_wicketkeeper_most_dismissals_innings
+
+  - rule: ask_wicketkeeper_overall_records
+    steps:
+      - intent: ask_wicketkeeper_overall_records
+      - action: action_wicketkeeper_overall_records
+
+
+  # Group 4: Bowler Data Actions
+  - rule: ask_bowler_impact_by_year
+    steps:
+      - intent: ask_bowler_impact_by_year
+      - action: action_bowler_impact_by_year
+
+  - rule: ask_most_4_wickets_innings
+    steps:
+      - intent: ask_most_4_wickets_innings
+      - action: action_most_4_wickets_innings
+
+  - rule: ask_most_economical
+    steps:
+      - intent: ask_most_economical
+      - action: action_most_economical
+
+  - rule: ask_most_wickets_1st_50_matches
+    steps:
+      - intent: ask_most_wickets_1st_50_matches
+      - action: action_most_wickets_1st_50_matches
+
+  - rule: ask_most_wickets_consecutive_matches
+    steps:
+      - intent: ask_most_wickets_consecutive_matches
+      - action: action_most_wickets_consecutive_matches
+
+  - rule: ask_most_wickets_in_ipl
+    steps:
+      - intent: ask_most_wickets_in_ipl
+      - action: action_most_wickets_in_ipl
+
+  - rule: ask_most_wickets_innings
+    steps:
+      - intent: ask_most_wickets_innings
+      - action: action_most_wickets_innings
+
+  - rule: Activate fallback when low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: action_fallback

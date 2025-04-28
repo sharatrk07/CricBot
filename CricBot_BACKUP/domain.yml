@@ -1,0 +1,545 @@
+version: "3.1"
+
+intents:
+  # General Intents
+  - greet
+  - goodbye
+  - nlu_fallback
+  - affirm
+  - deny
+  - thankyou
+  - help
+  - ask_name
+  - ask_capabilities
+  - ask_how_are_you
+  - mood_great
+  - mood_unhappy
+
+  # Bowling Related Intents
+  - ask_bowler_impact_by_year
+  - ask_most_4_wickets_innings
+  - ask_most_economical
+  - ask_most_wickets_1st_50_matches
+  - ask_most_wickets_consecutive_matches
+  - ask_most_wickets_in_ipl
+  - ask_most_wickets_innings
+  - ask_best_economy_rates_innings
+  - ask_bowler_best_strike_rate
+  - ask_bowler_dismissal_records
+  - ask_fastest_player_50_wickets
+  - ask_first_ball_wicket
+  - ask_ipl_bowlers_data_2008_2024
+  - ask_ipl_hat_tricks
+  - ask_lowest_averages
+  - ask_most_runs_conceded
+  
+  # Wicketkeeper Related Intents
+  - ask_player_impact_by_season
+  - ask_wicketkeeper_highest_scores
+  - ask_wicketkeeper_most_dismissals_innings
+  - ask_wicketkeeper_overall_records
+  
+  # Team Related Intents
+  - ask_team_ground_performance
+  - ask_team_opponent_record
+  - ask_team_overall_record
+  - ask_team_home_ground_record
+  - ask_team_performance_by_opponent
+  - ask_team_no_result_matches
+  - ask_head_to_head_by_ground
+  - ask_most_dominant_team_at_venue
+  - ask_team_matches
+  - ask_team_performance_against_opponent
+  - ask_team_performance_at_venue
+  - ask_team_season_performance
+  - ask_team_win_percentage
+  - ask_head_to_head
+  - ask_most_successful_team
+  - ask_team_results_by_year
+  - ask_team_home_away_performance
+  - ask_all_ipl_match_data_yearwise
+  - ask_team_performance_yearwise
+  
+  # Match Related Intents
+  - ask_close_matches_by_wickets
+  - ask_end_moment_finish
+  - ask_highest_match_total_scores
+  - ask_highest_partnerships
+  - ask_highest_run_chase
+  - ask_highest_scores_teamwise
+  - ask_highest_scores
+  - ask_highest_successful_run_chases
+  - ask_ipl_points_table
+  - ask_lowest_scores_ipl
+  - ask_lowest_scores_teamwise
+  - ask_one_sided_finish
+  - ask_top_partnerships_by_team
+  - ask_tied_matches
+  
+  # Batting Related Intents - Group 1
+  - ask_20_to_50_consecutive_innings
+  - ask_30_to_50_consecutive_innings
+  - ask_40_to_50_consecutive_innings
+  - ask_50_on_debut
+  - ask_batsman_dismiss_1st_ball
+  - ask_first_50_innings_count
+  - ask_highest_strike_rate_innings
+  - ask_innings_to_1st_100
+  - ask_openers_50_and_duck
+  - ask_opening_pairs_50_plus_partnerships
+  - ask_scoring_99_an_innings
+  - ask_top_scorers_by_position
+  - ask_yearwise_highest_averages
+  
+  # Batting Related Intents - Group 2
+  - ask_1000_to_8000_runs
+  - ask_best_strike_rate
+  - ask_career_partnerships
+  - ask_fastest_centuries
+  - ask_fastest_fifties
+  - ask_fastest_milestone_runs
+  - ask_highest_scores_innings
+  - ask_highest_strike_rates_all_time
+  - ask_most_centuries
+  - ask_most_fifties
+  - ask_most_runs_2008_2024
+  - ask_most_runs_from_boundaries
+  - ask_most_runs_overall
+  - ask_most_sixes_2008_2024
+  - ask_most_sixes_all_time
+  - ask_most_boundary_runs
+  - ask_most_runs_in_playoffs
+  - ask_best_batting_averages
+  - ask_best_batting_strike_rates
+  
+  # Player and IPL data Intents
+  - ask_all_players_records
+  - ask_auctioneers
+  - ask_cap_holders
+  - ask_coaches_overall
+  - ask_grounds_records
+  - ask_highest_catches
+  - ask_ipl_captains_records
+  - ask_ipl_players_overall_data
+  - ask_ipl_team_captains_records
+  - ask_most_catch_in_an_innings
+  - ask_most_ducks_in_career
+  - ask_top_allrounders
+  - ask_umpire_data
+
+
+entities:
+  - player_name
+  - team_name
+  - year
+  - season
+  - season_range
+  - opponent_team
+  - venue
+  - wickets
+  - team
+  - opponent
+  - ground
+  - result
+  - match_code
+  - wicket_position
+  - runs
+  - margin
+  - innings
+  - bowler_name
+  - date
+  - economy_rate
+  - strike_rate
+  - batsman_name
+  - Bowler
+  - Team_Name
+  - Economy_Rate
+  - Opponent
+  - Player
+  - Wickets
+  - Matches
+  - Average
+  - Batsman
+  - Dismissal_Percentage
+  - Innings_Faced
+  - Dismissed_Batsman
+  - Balls
+  - captain_name
+  - coach_name
+  - auctioneer_name
+  - allrounder_name
+  - umpire_name
+  - final_position
+
+slots:
+  player_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: player_name
+  team_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: team_name
+  year:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: year
+  season:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: season
+  season_range:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: season_range
+  opponent_team:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: opponent_team
+  venue:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: venue
+  wickets:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: wickets
+  team:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: team
+  opponent:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: opponent
+  ground:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: ground
+  result:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: result
+  match_code:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: match_code
+  wicket_position:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: wicket_position
+  runs:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: runs
+  margin:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: margin
+  innings:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: innings
+  bowler_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: bowler_name
+  date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+  economy_rate:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: economy_rate
+  strike_rate:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: strike_rate
+  batsman_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: batsman_name
+  Bowler:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Bowler
+  Team_Name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Team_Name
+  Economy_Rate:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Economy_Rate
+  Opponent:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Opponent
+  Player:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Player
+  Wickets:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Wickets
+  Matches:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Matches
+  Average:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Average
+  Batsman:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Batsman
+  Dismissal_Percentage:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Dismissal_Percentage
+  Innings_Faced:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Innings_Faced
+  Dismissed_Batsman:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Dismissed_Batsman
+  Balls:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: Balls
+  captain_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: captain_name
+  coach_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: coach_name
+  auctioneer_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: auctioneer_name
+  allrounder_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: allrounder_name
+  umpire_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: umpire_name
+  final_position:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: final_position
+
+responses:
+  utter_default:
+    - text: "Sorry, I didn't catch that. Could you please rephrase your question about IPL statistics?"
+  
+  utter_greet:
+    - text: "Hello! How can I assist you with IPL statistics today?"
+    - text: "Hi there! Ready to talk about IPL cricket? What would you like to know?"
+    - text: "Welcome! I'm your IPL stats assistant. What information are you looking for?"
+  
+  utter_goodbye:
+    - text: "Goodbye! Come back anytime for more IPL insights."
+    - text: "Bye, See you later!"
+
+  utter_affirm:
+    - text: "Great! What would you like to know about IPL?"
+    - text: "Excellent! I'm ready to help with your IPL queries."
+  
+  utter_deny:
+    - text: "No problem. Let me know if you need anything else."
+    - text: "That's alright. Feel free to ask about any IPL stats when you're ready."
+  
+  utter_thankyou:
+    - text: "You're welcome! Happy to help with IPL information."
+    - text: "My pleasure! Cricket stats are my specialty."
+  
+  utter_help:
+    - text: "You can ask me about IPL stats, player records, match outcomes, team rankings, and more. Try questions like 'Who scored the most runs in IPL 2023?' or 'Which team has won the most IPL trophies?'"
+  
+  utter_capabilities:
+    - text: "I can provide IPL statistics, player performances, team rankings, match results, tournament history, and various cricket records. Just ask me anything related to IPL!"
+  
+  utter_name:
+    - text: "I am your IPL Stats Assistant, designed to help you with all things IPL cricket."
+  
+  utter_how_are_you:
+    - text: "I'm doing great! Ready to talk cricket. How about you?"
+    - text: "I'm excellent, thanks for asking! Excited to discuss IPL with you today."
+  
+  utter_mood_great:
+    - text: "That's wonderful! How can I assist with IPL information today?"
+    - text: "Great to hear! Ready to dive into some cricket stats?"
+  
+  utter_mood_unhappy:
+    - text: "I'm sorry to hear that. Maybe some IPL trivia can cheer you up! Did you know the longest six in IPL history traveled 120 meters?"
+    - text: "That's unfortunate. Perhaps talking about cricket might help? Would you like to know which match had the highest total in IPL history?"
+
+actions:
+  # Fallback actions
+  - action_fallback
+  
+  # Bowling Related Actions
+  - action_bowler_impact_by_year
+  - action_most_4_wickets_innings
+  - action_most_economical
+  - action_most_wickets_1st_50_matches
+  - action_most_wickets_consecutive_matches
+  - action_most_wickets_in_ipl
+  - action_most_wickets_innings
+  - action_best_economy_rates_innings
+  - action_bowler_best_strike_rate
+  - action_bowler_dismissal_records
+  - action_fastest_player_50_wickets
+  - action_first_ball_wicket
+  - action_ipl_bowlers_data_2008_2024
+  - action_ipl_hat_tricks
+  - action_lowest_averages
+  - action_most_runs_conceded
+  
+  # Wicketkeeper Related Actions
+  - action_player_impact_by_season
+  - action_wicketkeeper_highest_scores
+  - action_wicketkeeper_most_dismissals_innings
+  - action_wicketkeeper_overall_records
+  
+  # Team Related Actions
+  - action_team_ground_performance
+  - action_team_opponent_record
+  - action_team_overall_record
+  - action_team_home_ground_record
+  - action_team_performance_by_opponent
+  - action_team_no_result_matches
+  - action_head_to_head_by_ground
+  - action_most_dominant_team_at_venue
+  - action_team_matches
+  - action_team_performance_against_opponent
+  - action_team_performance_at_venue
+  - action_team_season_performance
+  - action_team_win_percentage
+  - action_head_to_head
+  - action_most_successful_team
+  - action_team_results_by_year
+  - action_team_home_away_performance
+  - action_all_ipl_match_data_yearwise
+  - action_team_performance_yearwise
+  
+  # Match Related Actions
+  - action_close_matches_by_wickets
+  - action_end_moment_finish
+  - action_highest_match_total_scores
+  - action_highest_partnerships
+  - action_highest_run_chase
+  - action_highest_scores_teamwise
+  - action_highest_scores
+  - action_highest_successful_run_chases
+  - action_ipl_points_table
+  - action_lowest_scores_ipl
+  - action_lowest_scores_teamwise
+  - action_one_sided_finish
+  - action_top_partnerships_by_team
+  - action_tied_matches
+  
+  # Batting Related Actions - Group 1
+  - action_20_to_50_consecutive_innings
+  - action_30_to_50_consecutive_innings
+  - action_40_to_50_consecutive_innings
+  - action_50_on_debut
+  - action_batsman_dismiss_1st_ball
+  - action_first_50_innings_count
+  - action_highest_strike_rate_innings
+  - action_innings_to_1st_100
+  - action_openers_50_and_duck
+  - action_opening_pairs_50_partnerships
+  - action_scoring_99_an_innings
+  - action_top_scorers_by_position
+  - action_yearwise_highest_averages
+  
+  # Batting Related Actions - Group 2
+  - action_1000_to_8000_runs
+  - action_best_strike_rate
+  - action_career_partnerships
+  - action_fastest_centuries
+  - action_fastest_fifties
+  - action_fastest_milestone_runs
+  - action_highest_scores_innings
+  - action_highest_strike_rates_all_time
+  - action_most_centuries
+  - action_most_fifties
+  - action_most_runs_2008_2024
+  - action_most_runs_from_boundaries
+  - action_most_runs_overall
+  - action_most_sixes_2008_2024
+  - action_most_sixes_all_time
+  - action_most_boundary_runs
+  - action_most_runs_in_playoffs
+  - action_best_batting_averages
+  - action_best_batting_strike_rates
+  
+  # Player and IPL data Actions
+  - action_all_players_records
+  - action_auctioneers
+  - action_cap_holders
+  - action_coaches_overall
+  - action_grounds_records
+  - action_highest_catches
+  - action_ipl_captains_records
+  - action_ipl_players_overall_data
+  - action_ipl_team_captains_records
+  - action_most_catch_in_an_innings
+  - action_most_ducks_in_career
+  - action_top_allrounders
+  - action_umpire_data
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

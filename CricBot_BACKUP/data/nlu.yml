@@ -1,0 +1,1692 @@
+version: "3.1"
+
+nlu:
+  - intent: affirm
+    examples: |
+      - yes
+      - yep
+      - sure
+      - absolutely
+      - indeed
+      - correct
+      - right
+      - exactly
+      - you bet
+      - of course
+      - that sounds good
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - nah
+      - not really
+      - I don't think so
+      - never
+      - negative
+      - don't
+      - not at all
+      - definitely not
+
+  - intent: thankyou
+    examples: |
+      - thanks
+      - thank you
+      - thank you so much
+      - thanks a lot
+      - much appreciated
+      - thanks!
+      - appreciate it
+      - that was helpful, thanks
+      - great help, thanks
+
+  - intent: help
+    examples: |
+      - help
+      - can you help me?
+      - I need help
+      - could you assist me?
+      - I'm stuck
+      - how can you assist?
+      - what can I ask
+      - show me what you can do
+      - assistance please
+
+  - intent: ask_name
+    examples: |
+      - what is your name?
+      - who are you?
+      - what's your name?
+      - may I know your name?
+      - tell me your name
+      - what should I call you?
+      - do you have a name?
+      - introduce yourself
+
+  - intent: ask_capabilities
+    examples: |
+      - what can you do?
+      - what are your capabilities?
+      - how can you help?
+      - what can you help me with?
+      - tell me your capabilities
+      - what are your features?
+      - what information can you provide?
+      - what cricket info do you have?
+      - what type of stats can you show?
+
+  - intent: ask_how_are_you
+    examples: |
+      - how are you?
+      - how's it going?
+      - how do you do?
+      - how are things?
+      - how are you doing today?
+      - how's your day?
+      - doing well?
+
+  - intent: mood_great
+    examples: |
+      - I'm great
+      - I'm good
+      - doing well
+      - feeling good
+      - I'm fine
+      - fantastic
+      - I feel awesome
+      - never been better
+      - excellent
+      - I'm on top of the world
+
+  - intent: mood_unhappy
+    examples: |
+      - I'm sad
+      - not feeling well
+      - I'm upset
+      - feeling bad
+      - I'm unhappy
+      - could be better
+      - I'm feeling down
+      - having a rough day
+      - my team lost yesterday
+      - disappointed with the match
+
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi
+      - Hey
+      - Good morning
+      - Good evening
+      - How are you?
+      - Hello there
+      - Hi bot
+      - Hey cricket bot
+      - Greetings
+      - What's up
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - See you
+      - Bye
+      - Take care
+      - See you later
+      - Catch you later
+      - I'm leaving
+      - Have a nice day
+      - Bye bye
+      - Gotta go
+
+  # Group 1: Batting Performance Intents
+  - intent: ask_20_to_50_consecutive_innings
+    examples: |
+      - Who scored the most runs in 20 consecutive IPL innings?
+      - Which player has the highest runs in 20 consecutive innings?
+      - Show me players with best performance in 20 consecutive innings
+      - Who is the most consistent batsman over 20 IPL innings?
+      - Best 20-innings run streak in IPL
+      - Top batsmen in 20 straight innings
+      - Highest run aggregates in 20 consecutive IPL appearances
+      - Who dominated in a 20-innings stretch?
+      - Players with exceptional 20-game batting runs
+      - Most productive 20-innings sequences
+      - Display the leading 20‑match run sequence in IPL history
+      - Which batsman amassed the highest runs across a 20‑game stretch?
+
+  - intent: ask_30_to_50_consecutive_innings
+    examples: |
+      - Who scored the most runs in 30 consecutive IPL innings?
+      - Which player has the highest runs in 30 consecutive innings?
+      - Show me players with best performance in 30 consecutive innings
+      - Who is the most consistent batsman over 30 IPL innings?
+      - Best 30-innings run streak in IPL
+      - Top performers across 30 straight innings
+      - Batsmen with highest totals in 30 consecutive games
+      - Most consistent run-scorers over 30 innings
+      - Longest 30-innings hot streaks in IPL
+      - Players with dominant 30-match batting spells
+      - Show the record run total over 30 consecutive IPL innings
+      - List players with the best 30‑innings run streak
+
+
+  - intent: ask_40_to_50_consecutive_innings
+    examples: |
+      - Who scored the most runs in 40 consecutive IPL innings?
+      - Which player has the highest runs in 40 consecutive innings?
+      - Show me players with best performance in 40 consecutive innings
+      - Who is the most consistent batsman over 40 IPL innings?
+      - Best 40-innings run streak in IPL
+      - Top run-getters in 40 straight appearances
+      - Most productive 40-innings windows
+      - Batsmen with exceptional consistency over 40 games
+      - Highest 40-innings run aggregates
+      - Players maintaining form for 40 consecutive innings
+      - Who holds the highest 40‑innings run aggregate?
+      - Which player scored the most over a 40‑match span?
+
+
+  - intent: ask_50_on_debut
+    examples: |
+      - Which players scored 50 on IPL debut?
+      - List of batsmen with half-centuries in their first IPL match
+      - Players who hit 50+ on IPL debut
+      - Debut half-centuries in IPL history
+      - First-match fifty scorers in IPL
+      - Who made fifty in their first IPL appearance?
+      - Batsmen with debut fifties in IPL
+      - Players starting IPL career with a half-century
+      - Impressive debut fifties in IPL cricket
+      - Newcomers who scored 50 in first game
+
+  - intent: ask_batsman_dismiss_1st_ball
+    examples: |
+      - Which batsmen got out on first ball in IPL?
+      - Players with most golden ducks in IPL
+      - List of batsmen dismissed on the first ball
+      - First-ball dismissals in IPL history
+      - Golden duck records in IPL
+      - Batsmen out without scoring on first delivery
+      - Who has the most first-ball ducks in IPL?
+      - Statistics on first-ball dismissals
+      - Batters frequently out on their first ball
+      - Zero-run first-ball dismissals in IPL
+
+  - intent: ask_first_50_innings_count
+    examples: |
+      - Who reached their first fifty in the fewest innings?
+      - Fastest batsmen to score their first IPL fifty
+      - Least innings taken to score a first fifty in IPL
+      - Players who scored their first fifty quickly
+      - Fewest innings to first half-century in IPL
+      - Quickest to maiden fifty in IPL history
+      - Batsmen who needed minimal innings for first 50
+      - Earliest fifty scorers in IPL career
+      - Most efficient first fifty achievements
+      - Rapid first half-century makers in IPL
+
+  - intent: ask_highest_strike_rate_innings
+    examples: |
+      - Which player has the highest strike rate in an IPL innings?
+      - Best strike rate in a single IPL match
+      - Highest scoring rate in one IPL innings
+      - Top strike rates in IPL innings (minimum 30 runs)
+      - Fastest scoring innings in IPL history
+      - Most destructive batting performances by strike rate
+      - Quickest scoring single innings in IPL
+      - Batsmen with explosive strike rates in one match
+      - Highest run rate knocks in IPL
+      - Most aggressive batting displays by strike rate
+
+  - intent: ask_innings_to_1st_100
+    examples: |
+      - Who scored their first century in the fewest innings?
+      - Fastest batsmen to their first IPL hundred
+      - Least innings taken for first IPL century
+      - Players who reached their first hundred quickly
+      - Fewest innings to score a century in IPL
+      - Quickest to maiden century in IPL history
+      - Batsmen needing minimal innings for first 100
+      - Earliest century makers in their IPL career
+      - Most efficient first hundred achievements
+      - Rapid first centurions in IPL cricket
+
+  - intent: ask_openers_50_and_duck
+    examples: |
+      - When did opening partners score a fifty and a duck in the same match?
+      - Instances where one opener scored 50+ and the other a duck
+      - IPL matches with an opening pair having 50 and 0
+      - Opening partnerships with contrasting scores (50 and duck)
+      - IPL games where openers had 50+ and 0 scores
+      - Matches with one opener making fifty and partner a duck
+      - Contrasting opener performances with 50 and 0
+      - Games featuring fifty and duck by opening pair
+      - Stark differences in opening batsmen scores (50 and 0)
+      - Instances of half-century and golden duck by openers
+
+  - intent: ask_opening_pairs_50_plus_partnerships
+    examples: |
+      - Which opening pairs have the most 50+ partnerships?
+      - Opening duos with most fifty-plus stands
+      - Successful opening pairs with 50+ partnerships
+      - Opening batsmen with consistent 50+ stands
+      - Most fifty-plus opening stands by a pair
+      - Openers with frequent half-century partnerships
+      - Duos with highest number of 50+ opening stands
+      - Most prolific opening pairs with 50+ stands
+      - Consistent 50+ partnership opening pairs
+      - Opening combinations with many fifty-plus alliances
+
+  - intent: ask_scoring_99_an_innings
+    examples: |
+      - Who has scored 99 in an IPL match?
+      - Players dismissed on 99 in IPL
+      - Batsmen who made exactly 99 runs in an innings
+      - List of 99-run innings in IPL history
+      - Batters who got out one short of century
+      - Players stranded on 99 in IPL matches
+      - Batsmen who fell just shy of century with 99
+      - Unfortunate 99-scorers in IPL cricket
+      - Near-centuries with 99 runs in IPL
+      - Batsmen missing hundreds by just one run
+
+  - intent: ask_top_scorers_by_position
+    examples: |
+      - Who are the top scorers at number 3?
+      - Best batsmen at position 4 in IPL
+      - Highest run-getters as openers in IPL
+      - Most runs scored from position 5
+      - Top run scorers by batting positions in IPL
+      - Leading run-makers at number 6 position
+      - Position-wise top run accumulators
+      - Best performers at each batting position
+      - Most successful batsmen by batting slot
+      - Most productive batters in different positions
+
+  - intent: ask_yearwise_highest_averages
+    examples: |
+      - Who had the highest batting average in IPL 2020?
+      - Best batting averages in IPL 2018
+      - Top averages in IPL 2022
+      - Highest batting average in 2021 IPL season
+      - Best yearly batting averages in IPL history
+      - Season-wise top batting averages in IPL
+      - Leading average batsmen in IPL 2023
+      - Year-by-year best batting averages
+      - Annual batting average leaders in IPL
+      - Statistical best averages season by season
+
+  # Group 2: Overall Batting Records
+  - intent: ask_1000_to_8000_runs
+    examples: |
+      - Who reached from 1000 to 8000 runs fastest?
+      - Players with quickest milestone jumps from 1000 to 8000
+      - Fastest to progress from 1000 to 8000 IPL runs
+      - Batsmen with rapid growth from 1000-8000 runs
+      - Quickest run milestone achievements in IPL
+      - Most rapid progression between major run milestones
+      - Batsmen advancing quickest from 1000 to 8000 runs
+      - Speediest run accumulation from 1000-8000
+      - Players with fastest thousand-run milestones
+      - Most efficient run milestone progression in IPL
+      - Which player reached 8000 runs in the fewest innings?
+      - Fastest batsman to go from 1000 to 8000 IPL runs
+
+  - intent: ask_best_strike_rate
+    examples: |
+      - Which batsman has the best career strike rate in IPL?
+      - Highest career batting strike rates in IPL
+      - Top strike rate batsmen in IPL history
+      - Players with best scoring rate overall
+      - Fastest scoring batsmen in IPL (career)
+      - All-time best striking batsmen in IPL
+      - Most aggressive career batting rates
+      - Batsmen with highest runs per ball ratio
+      - Leading career strike rates in IPL cricket
+      - Top run-rate batsmen across IPL history
+      - Name the IPL player with the highest career strike rate
+      - Who maintains the top runs-per-ball ratio in IPL?
+
+  - intent: ask_career_partnerships
+    examples: |
+      - Which pair has the most partnership runs in IPL?
+      - Batting duos with most runs together
+      - Most successful batting partnerships in IPL
+      - Pairs with highest aggregate runs in IPL
+      - Top run-scoring partnerships in IPL history
+      - Most prolific batting combinations in IPL
+      - Duos with highest partnership totals
+      - Batsmen with most productive alliances
+      - Leading run partnerships in IPL career stats
+      - Most effective batting pairs by total runs
+      - Which duo holds the record for most cumulative partnership runs?
+      - Top career run partnerships by opening pairs in IPL
+
+  - intent: ask_fastest_centuries
+    examples: |
+      - Who scored the fastest century in IPL?
+      - Quickest hundreds in IPL history
+      - Fastest 100s in IPL (by balls faced)
+      - Rapid centuries in IPL cricket
+      - Least balls to reach 100 in IPL
+      - Most explosive century makers in IPL
+      - Centuries scored in fewest deliveries
+      - Quickest ton hitters in IPL matches
+      - Swiftest century knocks in IPL
+      - Record-breaking fast hundreds in IPL
+      - Who scored an IPL century in the fewest balls?
+      - Fastest hundred ever recorded in IPL history
+
+  - intent: ask_fastest_fifties
+    examples: |
+      - Who scored the fastest fifty in IPL?
+      - Quickest half-centuries in IPL history
+      - Fastest 50s in IPL (by balls faced)
+      - Rapid fifties in IPL cricket
+      - Least balls to reach 50 in IPL
+      - Most explosive half-century makers
+      - Fifties scored in fewest deliveries
+      - Quickest fifty hitters in IPL matches
+      - Swiftest fifty knocks in IPL
+      - Record-breaking fast fifties in IPL
+      - Which player reached fifty in the least deliveries?
+      - Record for fastest fifty in IPL matches
+
+  - intent: ask_fastest_milestone_runs
+    examples: |
+      - Who was fastest to reach 2000 IPL runs?
+      - Quickest batsmen to 3000 IPL runs
+      - Fastest to 4000 runs in IPL history
+      - Players who reached 5000 runs in fewest innings
+      - Fastest to milestone runs (1000/2000/3000/etc.)
+      - Most efficient run milestone achievers
+      - Batsmen requiring fewest innings for run landmarks
+      - Quickest to major run milestones in IPL
+      - Rapid progression to 6000 IPL runs
+      - Speediest batsmen to reach 7000 runs
+      - Who was quickest to 5000 IPL runs?
+      - Fastest batsman to each major run milestone (2000, 3000, etc.)
+
+  - intent: ask_highest_scores_innings
+    examples: |
+      - What's the highest individual score in IPL?
+      - Top individual innings scores in IPL
+      - Highest runs by a batsman in one IPL match
+      - Best batting performances by runs in IPL
+      - Biggest individual scores in IPL history
+      - Record individual innings in IPL cricket
+      - Highest personal totals in a single match
+      - Top batting knocks by runs scored
+      - Greatest individual batting innings by runs
+      - Highest run-scoring performances in IPL
+      - What is the record highest individual IPL score?
+      - Largest runs scored by one batsman in a single IPL match
+
+  - intent: ask_highest_strike_rates_all_time
+    examples: |
+      - Who has the highest career strike rate in IPL?
+      - Best all-time strike rates in IPL
+      - Top IPL batsmen by career strike rate
+      - Highest career scoring rates in IPL
+      - Players with best strike rates overall
+      - Most aggressive batsmen by career strike rate
+      - Fastest scoring batters in IPL history
+      - Leading strike rates across all seasons
+      - All-time quickest scorers in IPL
+      - Career leaders in batting strike rate
+      - Which IPL batsman has the best career scoring rate?
+      - All-time leader in IPL strike rate (min. 500 runs)
+
+  - intent: ask_most_centuries
+    examples: |
+      - Who has scored the most centuries in IPL?
+      - Batsmen with highest number of hundreds
+      - Players with most IPL tons
+      - Most 100s in IPL career
+      - Leading century-makers in IPL history
+      - Top century-scorers in IPL
+      - Batsmen with most centuries to their name
+      - Most prolific hundred-getters in IPL
+      - Players with maximum IPL hundreds
+      - Record holders for most IPL centuries
+      - Who holds the all-time IPL century record?
+      - IPL century-count leader in history
+
+
+  - intent: ask_most_fifties
+    examples: |
+      - Who has scored the most fifties in IPL?
+      - Batsmen with highest number of half-centuries
+      - Players with most IPL fifties
+      - Most 50s in IPL career
+      - Leading fifty-makers in IPL history
+      - Top half-century scorers in IPL
+      - Batsmen with most fifties to their name
+      - Most prolific fifty-getters in IPL
+      - Players with maximum IPL half-centuries
+      - Record holders for most IPL fifties
+      - Who has scored the most half-centuries in IPL?
+      - Record holder for most IPL fifties
+
+  - intent: ask_most_runs_2008_2024
+    examples: |
+      - Who scored most runs in IPL 2022?
+      - Highest run-getters in IPL 2018
+      - Top scorers in IPL 2020 season
+      - Leading run scorers in IPL 2023
+      - Season-wise top run scorers in IPL
+      - Orange cap winners in different IPL seasons
+      - Yearly batting leaders in IPL history
+      - Most runs in IPL 2024 season
+      - Annual run-scoring champions in IPL
+      - Top run-makers in each IPL edition
+      - Top run scorer in the 2019 IPL season?
+      - Who led runs in IPL 2015?
+
+  - intent: ask_most_runs_from_boundaries
+    examples: |
+      - Who scored most runs from boundaries in IPL?
+      - Players with highest percentage of runs in boundaries
+      - Most runs in fours and sixes in IPL
+      - Batsmen scoring most through boundaries
+      - Top boundary hitters in IPL history
+      - Players with maximum boundary percentage
+      - Batsmen with highest boundary counts
+      - Most prolific boundary scorers in IPL
+      - Leading four and six hitters by runs
+      - Highest boundary-run contributors in IPL
+      - Which player has the highest boundary-run tally in IPL history?
+      - Most runs scored exclusively from fours and sixes in IPL
+
+  - intent: ask_most_runs_overall
+    examples: |
+      - Who has scored the most runs in IPL history?
+      - All-time leading run scorers in IPL
+      - Players with highest career runs in IPL
+      - Top run-getters across all IPL seasons
+      - Most aggregate runs in IPL cricket
+      - Career run leaders in IPL tournaments
+      - Highest run tallies in IPL history
+      - All-time run-scoring giants in IPL
+      - Leading run accumulators across IPL seasons
+      - Players with maximum IPL career runs
+      - Who tops the all-time IPL run charts?
+      - Player with the highest career runs in IPL
+
+  - intent: ask_most_sixes_2008_2024
+    examples: |
+      - Who hit most sixes in IPL 2022?
+      - Highest six-hitters in IPL 2020
+      - Top six-hitters in IPL 2023 season
+      - Most sixes in IPL 2018
+      - Season-wise six hitting leaders in IPL
+      - Maximum sixes in IPL 2024
+      - Yearly six-hitting champions
+      - Season leaders in maximum sixes
+      - Most sixes by a batsman in IPL 2019
+      - Annual six-hitting records in IPL
+      - Season leader in sixes for IPL 2021?
+      - Who hit the most sixes in IPL 2019?
+
+  - intent: ask_most_sixes_all_time
+    examples: |
+      - Who has hit the most sixes in IPL history?
+      - All-time six hitting leaders in IPL
+      - Players with highest career sixes in IPL
+      - Top six-hitters across all IPL seasons
+      - Most sixes in IPL cricket overall
+      - Career six leaders in IPL tournaments
+      - Highest six tallies in IPL history
+      - All-time six-hitting giants in IPL
+      - Leading six hitters across IPL seasons
+      - Players with maximum IPL career sixes
+      - All-time IPL six-hitting champion?
+      - Player with the most career sixes in IPL history
+
+  - intent: ask_most_boundary_runs
+    examples: |
+      - Who scored most boundary runs in an IPL innings?
+      - Highest percentage of runs in boundaries in a match
+      - Most runs through fours and sixes in one innings
+      - Innings with maximum boundary runs in IPL
+      - Highest boundary percentage innings in IPL
+      - Most boundary-heavy batting performances
+      - Innings with greatest boundary contribution
+      - Maximum boundary runs in a single match
+      - Batsmen with most runs in boundaries (single innings)
+      - Record boundary run percentage in an innings
+      - Which IPL innings had the greatest boundary-run count?
+      - Record for most runs in boundaries in a single match
+
+  - intent: ask_best_batting_averages
+    examples: |
+      - Who has the best batting average in IPL history?
+      - Highest career batting averages in IPL
+      - Top average batsmen in IPL (minimum 20 innings)
+      - Best batting averages in IPL cricket
+      - Players with highest run averages in IPL
+      - Leading career batting averages
+      - Most consistent batsmen by average
+      - Batters with top run-per-dismissal ratios
+      - Highest averaging IPL batsmen of all time
+      - Statistical leaders in batting average
+      - Who holds the highest IPL batting average (min. 20 innings)?
+      - Top average batsman in IPL history
+
+  - intent: ask_best_batting_strike_rates
+    examples: |
+      - Who has the highest batting strike rate in IPL?
+      - Best career strike rates in IPL cricket
+      - Players with fastest scoring rates in IPL
+      - Top strike rate batsmen (minimum 500 runs)
+      - Highest striking batters in IPL history
+      - Batsmen with quickest scoring capabilities
+      - Leading run-rate batsmen in IPL
+      - Players with most explosive batting rates
+      - Fastest scoring batters in 2008
+      - Who has the best IPL career strike rate?
+      - Highest runs-per-ball ratio in IPL history
+
+  - intent: ask_most_runs_in_playoffs
+    examples: |
+      - Who has scored most runs in IPL playoffs?
+      - Top run-getters in IPL knockout matches
+      - Best playoff performers with the bat
+      - Most runs in IPL finals and eliminators
+      - Leading scorers in IPL playoff history
+      - Batsmen with exceptional playoff records
+      - Top run-scorers in IPL elimination games
+      - Players with best batting stats in knockouts
+      - Most prolific run-makers in crucial IPL matches
+      - Highest aggregate runs in playoff encounters
+      - Which batsman scored the most runs in IPL playoffs?
+      - Playoff run-scoring leader in IPL history
+
+  # Group 3: Bowling Performance Intents
+  - intent: ask_best_economy_rates_innings
+    examples: |
+      - Best economy rate in an IPL innings?
+      - Most economical bowling spell in IPL
+      - Lowest economy rate in an IPL match
+      - Most miserly bowling figures in IPL
+      - Bowler with best economy in a match
+      - Tightest bowling performances by economy
+      - Most restrictive bowling spells in IPL
+      - Lowest runs-per-over figures in an innings
+      - Most economical bowling displays in IPL
+      - Bowlers with exceptional economy in a game
+      - Name the IPL match with the lowest economy rate spell
+      - Which bowler conceded the fewest runs per over in an IPL innings?
+
+  - intent: ask_bowler_best_strike_rate
+    examples: |
+      - Who has the best bowling strike rate in IPL?
+      - Bowlers with lowest balls per wicket ratio
+      - Best wicket-taking rates among IPL bowlers
+      - Top bowling strike rates in IPL history
+      - Bowlers who take wickets most frequently
+      - Most efficient wicket-takers by strike rate
+      - Bowlers needing fewest balls per dismissal
+      - Leading strike rate bowlers in IPL
+      - Most regular wicket-takers by balls bowled
+      - Quickest to wickets by bowling strike rate
+      - Who takes wickets most frequently in IPL history?
+      - IPL bowler with the lowest balls-per-wicket ratio all-time
+
+  - intent: ask_bowler_dismissal_records
+    examples: |
+      - Which bowler has dismissed a particular batsman most times?
+      - Bowlers with most wickets against specific batsmen
+      - Who has got Kohli out the most in IPL?
+      - Bowler-batsman dismissal records in IPL
+      - Most dismissals of one batsman by a bowler
+      - Bowlers dominating particular batsmen
+      - Head-to-head wicket records between players
+      - Frequent dismissal combinations in IPL
+      - Bowlers with psychological edge over batsmen
+      - Most successful bowler against Rohit Sharma
+      - Which bowler has the most dismissals of a single batsman?
+      - IPL head-to-head dismissal leader against a specific batsman
+
+  - intent: ask_fastest_player_50_wickets
+    examples: |
+      - Who took 50 wickets in the fewest IPL matches?
+      - Fastest bowlers to reach 50 IPL wickets
+      - Quickest to 50 wicket milestone in IPL
+      - Bowlers reaching 50 wickets in least games
+      - Fewest matches to take 50 IPL wickets
+      - Most efficient path to 50 IPL wickets
+      - Bowlers needing minimal matches for 50 wickets
+      - Rapid 50-wicket achievers in IPL
+      - Quickest bowlers to 50-wicket landmark
+      - Speediest to half-century of IPL wickets
+      - Fastest to 50 IPL wickets in terms of matches played
+      - Which bowler reached 50 wickets in the fewest games?
+
+
+  - intent: ask_first_ball_wicket
+    examples: |
+      - Which bowlers have taken wickets on the first ball of an innings?
+      - First-ball wickets in IPL history
+      - Bowlers who struck on the very first delivery
+      - Opening ball wickets in IPL matches
+      - First delivery dismissals in IPL games
+      - Immediate wicket-takers in IPL matches
+      - Bowlers successful on first ball of spell
+      - First-ball breakthrough specialists
+      - Instant wicket-takers in IPL innings
+      - Opening delivery wickets by bowlers
+      - IPL bowlers who struck on their very first delivery
+      - Who took a wicket with the first ball of an IPL innings?
+
+  - intent: ask_ipl_bowlers_data_2008_2024
+    examples: |
+      - Show statistics for IPL bowlers from 2008 to 2024
+      - Complete bowling records across all IPL seasons
+      - Career data for all IPL bowlers
+      - Bowling statistics for entire IPL history
+      - All-time bowling figures in IPL (2008-2024)
+      - Comprehensive bowling stats since IPL began
+      - Full career records of IPL bowlers
+      - Historical bowling data through IPL history
+      - Complete bowling analytics from all seasons
+      - All IPL bowlers' career numbers (2008-2024)
+      - Show complete IPL bowling stats from 2008 to 2024
+      - All-time bowling figures for IPL seasons 2008–2024
+
+  - intent: ask_ipl_hat_tricks
+    examples: |
+      - Who has taken hat-tricks in IPL?
+      - List of all IPL hat-tricks
+      - Bowlers with hat-tricks in IPL history
+      - IPL hat-trick achievers
+      - Three wickets in three consecutive balls in IPL
+      - Complete list of IPL hat-trick takers
+      - All hat-trick performances in IPL cricket
+      - Bowlers who claimed three in three in IPL
+      - Every hat-trick in IPL tournament history
+      - Consecutive three-wicket heroes in IPL
+      - List IPL hat-tricks by bowler
+      - Who has taken the most hat-tricks in IPL history?
+
+  - intent: ask_lowest_averages
+    examples: |
+      - Which bowlers have the lowest bowling averages in IPL?
+      - Best bowling averages in IPL history
+      - Bowlers with lowest runs per wicket
+      - Top bowlers by bowling average
+      - Lowest career bowling averages in IPL
+      - Most economical wicket-takers by average
+      - Bowlers with best runs-to-wicket ratio
+      - Leading average bowlers in IPL history
+      - Most efficient bowlers by bowling average
+      - Statistical best bowling averages in IPL
+      - IPL bowlers with the lowest career bowling averages
+      - Who has the best runs-per-wicket ratio in IPL?
+
+  - intent: ask_most_runs_conceded
+    examples: |
+      - Which bowler conceded most runs in an IPL match?
+      - Most expensive bowling figures in IPL
+      - Highest runs conceded in IPL innings
+      - Bowlers with most runs against them in a match
+      - Worst bowling economy in IPL history
+      - Most costly bowling spells in IPL
+      - Bowlers hit for maximum runs in a match
+      - Record runs conceded in IPL bowling
+      - Highest economy rates in IPL history
+      - Most expensive bowling performances ever
+      - Which bowler conceded the most runs in an IPL match?
+      - Record for highest runs given away by a bowler in one game
+
+# ------------------------------------------------------------------------------------------------------------------------
+
+# Group 4: Player and IPL Data
+  - intent: ask_all_players_records
+    examples: |
+      - Show complete records of all IPL players
+      - Full statistics of all players in IPL history
+      - Career data for every IPL player
+      - Show me Virat Kohli's career stats
+      - What are MS Dhoni's complete IPL records?
+      - Tell me about Rohit Sharma's batting and bowling stats
+      - Show me records of players from CSK
+      - Display comprehensive statistics for AB de Villiers
+      - I want to see Suresh Raina's full IPL career data
+      - Give me Jasprit Bumrah's complete bowling figures
+      - What are KL Rahul's batting numbers across all seasons?
+      - Show Chris Gayle's entire IPL performance record
+      - Display every IPL player's full career statistics
+      - Complete batting and bowling records for all IPL players
+
+  - intent: ask_auctioneers
+    examples: |
+      - Who were the auctioneers in IPL history?
+      - List all IPL auction hosts over the years
+      - Names of people who conducted IPL auctions
+      - Who was the auctioneer in 2008 IPL auction?
+      - Tell me about Richard Madley as IPL auctioneer
+      - When did Hugh Edmeades become an IPL auctioneer?
+      - How many years has Richard Madley been an auctioneer?
+      - Which auctioneer conducted the most IPL auctions?
+      - Has an Indian ever been an IPL auctioneer?
+      - Who replaced Richard Madley as IPL auctioneer?
+      - Tell me about the auctioneers for mega auctions
+      - Which auction houses have provided auctioneers for IPL?
+      - IPL auctioneer lineup by year
+      - Who conducted the IPL auction in each season?
+
+
+  - intent: ask_cap_holders
+    examples: |
+      - Who won the Orange Cap and Purple Cap?
+      - List all Orange Cap winners by season
+      - Purple Cap holders in IPL history
+      - Who scored the most runs in 2010 IPL?
+      - Who took the most wickets in 2015 IPL?
+      - Has Virat Kohli ever won the Orange Cap?
+      - Has Jasprit Bumrah ever won the Purple Cap?
+      - Orange Cap holders from CSK
+      - Which player has won the most Purple Caps?
+      - Has any player won both Orange and Purple Caps?
+      - Tell me about multiple Orange Cap winners
+      - Which franchise has produced most Orange Cap holders?
+      - Season-wise Purple Cap winners since 2008
+      - Orange and Purple Cap winners by IPL season 
+      - Who won the Orange Cap and Purple Cap each year?
+
+  - intent: ask_coaches_overall
+    examples: |
+      - Who were the coaches of IPL teams?
+      - List all coaches in IPL history by team
+      - Who coached CSK throughout IPL?
+      - Who was Mumbai Indians' coach in 2015?
+      - Tell me about Stephen Fleming as coach
+      - Which teams has Tom Moody coached?
+      - Who was KKR's coach when they won their first title?
+      - How many years has Stephen Fleming coached CSK?
+      - Has Rahul Dravid coached any IPL team?
+      - Which former players have become IPL coaches?
+      - Most successful coaches in IPL history
+      - Foreign vs Indian coaches in the IPL
+      - Coach with longest tenure at a single franchise
+      - List IPL head coaches by franchise and year
+      - Which coach has the most IPL titles?
+
+  - intent: ask_grounds_records
+    examples: |
+      - Tell me about all IPL grounds used
+      - How many matches were played at Wankhede Stadium?
+      - Which ground has hosted the most IPL matches?
+      - Tell me about IPL venues in Mumbai
+      - How many IPL matches in Delhi?
+      - What grounds are used for IPL in Chennai?
+      - List IPL venues outside India
+      - How many matches at Eden Gardens?
+      - Which stadium has the highest scoring matches?
+      - Most boundaries hit at which venue?
+      - Grounds with most last-over finishes
+      - IPL stadiums with best bowling figures
+      - Most spinner-friendly IPL venues
+      - Stadiums with the most IPL matches hosted
+      - IPL venues ranked by match count
+
+  - intent: ask_highest_catches
+    examples: |
+      - Who has taken the most catches in IPL history?
+      - Top catchers in IPL career
+      - How many catches has Virat Kohli taken?
+      - Who has the most catches for CSK?
+      - Tell me about the best fielders in IPL
+      - Has Ravindra Jadeja taken many catches?
+      - Which player has the best catching record?
+      - Players with most career catches in IPL
+      - Who has the highest catches per match ratio?
+      - Best slip fielders by catch count
+      - Most athletic catchers in IPL history
+      - Fielders with most catches in the deep
+      - Non-wicketkeepers with most catches in IPL
+      - Who holds the single-innings IPL catch record?
+      - Top career catch-takers in IPL history
+
+  - intent: ask_ipl_captains_records
+    examples: |
+      - Who are the most successful IPL captains?
+      - What's MS Dhoni's win record as captain?
+      - Which captain has the best win percentage?
+      - How many matches has Rohit Sharma captained?
+      - Tell me about Virat Kohli's captaincy record
+      - Which teams has Gautam Gambhir captained?
+      - Who has captained the most IPL matches?
+      - List players who have captained multiple teams
+      - Captains with most IPL trophy wins
+      - Youngest captains in IPL history
+      - Which captain has the most playoff appearances?
+      - Best batting records as captain
+      - Foreign vs Indian captains success rate
+      - IPL captains ranked by win percentage
+      - Who has captained the most IPL matches?
+
+  - intent: ask_ipl_players_overall_data
+    examples: |
+      - Show complete stats of all IPL players
+      - What are Virat Kohli's overall IPL stats?
+      - Give me MS Dhoni's complete IPL record
+      - Which player has scored the most centuries?
+      - Who has the highest strike rate in IPL?
+      - How many runs did AB de Villiers score in IPL?
+      - What percentage of CSK's runs has MS Dhoni scored?
+      - Complete batting and bowling figures for all players
+      - Who has best combined batting and bowling stats?
+      - Players with most appearances in IPL history
+      - Show me all records for overseas players
+      - Complete performance data across all seasons
+      - Overall IPL performance stats for any player
+      - Complete IPL career summary for a given player
+
+  - intent: ask_ipl_team_captains_records
+    examples: |
+      - Show me team captains records in IPL
+      - Tell me about captains of CSK throughout history
+      - Who were all the captains of Mumbai Indians?
+      - What is MS Dhoni's record as CSK captain?
+      - How many matches did Gautam Gambhir win for KKR?
+      - Which captain has the best win percentage for RCB?
+      - How many different captains has Delhi Capitals had?
+      - Which team has had the fewest captains?
+      - Captains with most matches for each franchise
+      - Most successful captains team by team
+      - Records of stand-in captains for each team
+      - Franchise captains with best playoff records
+      - Team-wise captaincy changes by season
+      - Team-wise IPL captaincy records
+      - Which franchise has had the most captains?
+
+  - intent: ask_most_catch_in_an_innings
+    examples: |
+      - Who took the most catches in a single IPL innings?
+      - Maximum catches by a player in one match
+      - Record for most catches in an IPL game
+      - Has anyone taken 5 catches in an IPL match?
+      - How many catches did Mohammad Nabi take against Mumbai?
+      - Has any CSK player taken 4 or more catches in an innings?
+      - What's the most catches taken in one IPL innings?
+      - Players with 4+ catches in a single game
+      - Exceptional fielding performances with multiple catches
+      - Most remarkable catching displays in IPL history
+      - Fielders who took most catches in finals
+      - Has any player taken more than 3 catches regularly?
+      - Record for most catches in a single IPL innings
+      - Who took the highest number of catches in one match?
+
+  - intent: ask_most_ducks_in_career
+    examples: |
+      - Who has the most ducks in IPL career?
+      - Players with highest number of zeros
+      - How many ducks does Rohit Sharma have?
+      - Show me players with most golden ducks
+      - Has Glenn Maxwell had many ducks?
+      - How many times has Dinesh Karthik been dismissed for zero?
+      - Which RCB player has the most ducks?
+      - Batsmen with most first-ball ducks
+      - Top players with embarrassing duck records
+      - Percentage of innings ending in duck by player
+      - Quality batsmen with surprising duck counts
+      - Which opener has the most ducks in IPL?
+      - Players with the most ducks in IPL history
+      - Who has the highest count of IPL golden ducks?
+
+  - intent: ask_tied_matches
+    examples: |
+      - Tell me about all tied matches in IPL history
+      - How many tied matches in IPL so far?
+      - Has CSK been involved in any tied matches?
+      - Which teams have played the most tied matches?
+      - Tell me about IPL matches that went to Super Over
+      - Has there been a tied match in Bengaluru?
+      - Show all tied matches involving Mumbai Indians
+      - How many tied matches at Chennai?
+      - Teams with best record in tied matches
+      - Players who excelled in super overs
+      - Most nail-biting tied games in IPL
+      - Seasons with multiple tied matches
+      - Tied matches that decided qualification
+      - All IPL matches that ended in a tie
+      - Which seasons had tied IPL games?
+
+  - intent: ask_top_allrounders
+    examples: |
+      - Who are the top all-rounders in IPL history?
+      - Best all-round performers in IPL
+      - Is Ravindra Jadeja a good all-rounder?
+      - How good is Andre Russell as an all-rounder?
+      - Tell me about Shane Watson's all-round performance
+      - Who is considered the best all-rounder in IPL?
+      - How many wickets has Hardik Pandya taken?
+      - What are Kieron Pollard's all-round statistics?
+      - Players with best batting and bowling balance
+      - All-rounders who've won matches single-handedly
+      - Statistics for evaluating IPL all-rounders
+      - Impact of all-rounders on team success
+      - Indian vs foreign all-rounders in IPL
+      - IPL all-rounder rankings by combined stats
+      - Who is the most successful all-rounder in IPL?
+
+  - intent: ask_umpire_data
+    examples: |
+      - Tell me about IPL umpires over the years
+      - How many matches has Nitin Menon officiated?
+      - Which umpire has officiated the most IPL matches?
+      - Tell me about Kumar Dharmasena's IPL career
+      - How long has S Ravi been an IPL umpire?
+      - Show me international umpires in IPL
+      - How many IPL matches has AK Chaudhary umpired?
+      - Who are the most experienced IPL umpires?
+      - Female umpires in IPL history
+      - Which umpires officiated in most finals?
+      - Umpires with controversial decisions in IPL
+      - Most respected umpires according to players
+      - Umpire statistics for all IPL seasons
+      - Umpires with the most IPL matches officiated
+      - List IPL umpires and their match counts
+
+  # Group 5: Bowling and Wicket-taking Intents
+  - intent: ask_bowler_impact_by_year
+    examples: |
+      - Which bowler had the most impact in 2008 IPL?
+      - Show me top bowlers from 2013 to 2016
+      - Who were the best bowlers in 2022 IPL?
+      - Most wickets taken by a bowler in 2012 IPL
+      - Which bowler had the best economy rate in 2016?
+      - Bowlers with best strike rate between 2017 and 2021
+      - Who took the most wickets in 2008 IPL season?
+      - Best death bowlers in IPL 2019
+      - Most economical powerplay bowlers in 2021
+      - Top performing spinners in 2018 IPL
+      - Year-by-year bowling leaders in IPL
+      - Which bowler made the biggest impact in 2023?
+      - Most successful yorker specialists by season
+      - Who was the leading wicket‑taker in IPL 2015?
+      - Which bowler topped the economy charts in IPL 2018?
+
+  - intent: ask_most_4_wickets_innings
+    examples: |
+      - Which bowler has taken 4 wickets in an innings most times?
+      - Players with most 4-wicket hauls in IPL
+      - Who has the highest number of 4-wicket innings?
+      - Bowlers with most 4+ wickets in matches
+      - Most frequent 4-wicket takers in IPL
+      - Top bowlers with 4-wicket hauls
+      - Spinners with most 4-wicket innings
+      - Fast bowlers with frequent 4-wicket performances
+      - Which team has most 4-wicket haul bowlers?
+      - Players achieving 4 wickets in consecutive matches
+      - 4-wicket performances in tournament finals
+      - Bowlers specializing in 4-wicket displays
+      - Name the bowler with the most 4‑wicket hauls in IPL history
+      - Which player has the highest count of 4‑wicket innings?
+
+  - intent: ask_most_economical
+    examples: |
+      - Who are the most economical bowlers in IPL history?
+      - Bowlers with lowest career economy rates
+      - Which bowler concedes least runs per over?
+      - Most frugal bowlers in IPL
+      - Top economical bowlers (minimum 30 overs)
+      - Bowlers who consistently maintain low economy
+      - Best economy rates in death overs
+      - Most economical spinners in IPL cricket
+      - Pacers with exceptional economy records
+      - Economy rate specialists in powerplay
+      - Lowest economy across multiple seasons
+      - Career economy leaders (minimum 50 matches)
+      - Who holds the record for lowest career economy rate in IPL?
+      - Which bowler concedes the fewest runs per over in IPL history?
+
+  - intent: ask_most_wickets_1st_50_matches
+    examples: |
+      - Who took the most wickets in their first 50 IPL matches?
+      - Best bowlers in their initial 50 games
+      - Most wickets in early IPL career (first 50 matches)
+      - Bowlers with impressive starts in IPL
+      - Top wicket-takers in first 50 appearances
+      - Bowlers who made immediate impact in IPL
+      - Fastest to 75 wickets in IPL
+      - Early career performance of top bowlers
+      - Which spinner took most wickets in first 50 games?
+      - Pace bowlers with best start in first 50 matches
+      - Foreign vs Indian bowlers in first 50 games
+      - Most promising bowling starts in IPL history
+      - Which bowler claimed the most wickets in their first 50 IPL matches?
+      - Who had the highest wicket haul in their initial 50 games?
+
+  - intent: ask_most_wickets_consecutive_matches
+    examples: |
+      - Who took the most wickets in consecutive IPL matches?
+      - Best bowling streaks in IPL history
+      - Bowlers with most wickets in consecutive games
+      - Which player had longest wicket-taking streak?
+      - Most consistent wicket-takers in a row
+      - Most wickets in back-to-back IPL matches
+      - Longest streak of multi-wicket matches
+      - Bowlers with consecutive match-winning spells
+      - Most successful bowling runs in playoff phases
+      - Consecutive matches with economic bowling
+      - Spinners with best consecutive match figures
+      - Pacers with longest wicket-taking streaks
+      - Who took wickets in the most consecutive IPL matches?
+      - Which bowler holds the record for most wickets across successive games?
+
+  - intent: ask_most_wickets_in_ipl
+    examples: |
+      - Who has taken the most wickets in IPL history?
+      - All-time leading wicket-takers in IPL
+      - Bowlers with highest career wicket tally
+      - Top wicket-takers across all IPL seasons
+      - Most successful IPL bowlers by wickets
+      - Who leads the all-time IPL wicket charts?
+      - Highest wicket aggregates in IPL career
+      - Top 10 bowlers with most IPL dismissals
+      - Most prolific wicket-takers since IPL began
+      - Career wicket leaders among active players
+      - Spinners vs pacers in all-time wicket tallies
+      - Foreign bowlers with most career wickets
+      - Who is the all‑time leading wicket‑taker in IPL?
+      - Name the top career wicket‑holder in IPL history
+
+
+  - intent: ask_most_wickets_innings
+    examples: |
+      - Who has taken the most wickets in a single IPL innings?
+      - Best bowling figures in an IPL match
+      - Highest wicket haul in one IPL game
+      - Record for most wickets in an IPL match
+      - Top bowling performances by wickets taken
+      - Bowlers with 5+ wickets in an IPL match
+      - Most destructive bowling spells in IPL
+      - Record-breaking wicket hauls in one innings
+      - Has any bowler taken 6 wickets in IPL?
+      - Most remarkable bowling performances ever
+      - Spinners with 5-wicket hauls in IPL
+      - Best bowling figures in IPL finals
+      - Which bowler has the single‑match IPL wicket haul record?
+      - Who took the most wickets in a single IPL innings?  
+
+# ------------------------------------------------------------------------------------------------------------------------
+
+# Group 6: Match Data Intents
+  - intent: ask_all_ipl_match_data_yearwise
+    examples: |
+      - Show me all IPL match data for year 2023
+      - Complete list of matches played in IPL 2008
+      - Details of all matches from IPL 2019
+      - Give me the entire match schedule for IPL 2022
+      - Show me every match result from the 2015 season
+      - List all IPL matches conducted in 2017
+      - I want to see match data for IPL 2021
+      - Full match statistics for 2018 IPL season
+      - Can you show all matches from IPL 2010?
+      - Provide complete match details for 2016 IPL
+      - Show me all matches from the IPL 2016 season
+      - List every game played in IPL 2014
+
+  - intent: ask_team_performance_yearwise
+    examples: |
+      - How did Chennai Super Kings perform in 2018?
+      - Mumbai Indians performance throughout 2020 season
+      - Show me Kolkata Knight Riders stats for 2020 season
+      - Performance data for Delhi Capitals in 2019
+      - Win-loss record of Punjab Kings across seasons
+      - Rajasthan Royals performance in the 2022 season
+      - How well did Royal Challengers Bangalore play in 2021?
+      - Sunrisers Hyderabad results for the 2019 season
+      - What was Gujarat Titans performance like in 2023?
+      - Show me Lucknow Super Giants stats from 2022
+      - How did RCB perform in the 2017 IPL season?
+      - What was CSK’s win‑loss record in IPL 2019?
+
+  - intent: ask_close_matches_by_wickets
+    examples: |
+      - Show me matches won by 1 or 2 wickets
+      - List of closest matches decided by wickets
+      - Matches won by Sunrisers Hyderabad by small wicket margins
+      - IPL games with narrow wicket victories
+      - Nail-biting finishes decided by few wickets
+      - Which teams have won by just 1 wicket in IPL?
+      - Show matches with tight wicket margins
+      - Games where the winning team had 9 wickets down
+      - List all IPL matches decided by 2 wickets or less
+      - Close contests where team won with last few wickets
+      - List IPL matches won by one wicket
+      - Which games were decided by a two‑wicket margin?
+
+  - intent: ask_end_moment_finish
+    examples: |
+      - Show matches with 1 run victory margin
+      - Last ball finish matches in IPL history
+      - List of IPL games decided on final delivery
+      - Matches with closest run margins
+      - Most exciting finishes with 1-2 run margins
+      - Games that went down to the last ball
+      - IPL matches decided by single runs
+      - Thrilling finishes with teams winning by 2 runs
+      - Which matches were won on the final delivery?
+      - Nail-biting games with smallest run margins
+      - IPL matches decided on the last ball
+      - List games won by a single run in IPL
+
+  - intent: ask_highest_match_total_scores
+    examples: |
+      - What are the highest total match scores in IPL?
+      - Matches with most aggregate runs by both teams
+      - Games with highest combined team totals
+      - Highest scoring encounters in IPL history
+      - Matches with most runs scored in total
+      - Which IPL game had the highest match aggregate?
+      - Show me matches where combined runs exceeded 400
+      - Highest aggregate scores in IPL matches
+      - Games where both teams scored the most runs
+      - Top 5 matches with highest total runs
+      - Which IPL game has the highest aggregate score?
+      - What are the top five highest combined match totals in IPL?
+
+  - intent: ask_highest_partnerships
+    examples: |
+      - What are the highest partnerships in IPL history?
+      - Record batting partnerships in IPL
+      - Best batting pairs by runs scored together
+      - Highest 1st wicket partnerships in IPL
+      - Record partnerships for Chennai Super Kings
+      - Which batsmen have the best partnerships in IPL?
+      - Top 10 batting partnerships by runs
+      - Highest runs scored in a single partnership
+      - Best opening partnerships in IPL history
+      - Record-breaking batting pairs in IPL
+      - Record third‑wicket partnership in IPL history?
+      - Which pair holds the highest fifth‑wicket stand in IPL?
+
+  - intent: ask_highest_run_chase
+    examples: |
+      - What's the highest successful run chase in IPL?
+      - Biggest targets chased successfully
+      - Most runs chased in IPL history
+      - Teams chasing 200+ targets successfully
+      - Record chase by Punjab Kings in IPL
+      - Which team completed the highest chase in IPL?
+      - Top 5 successful run chases in IPL
+      - Matches where teams chased 220+ successfully
+      - Highest targets achieved while batting second
+      - Record-breaking successful run chases
+      - What is the highest successful chase in IPL?
+      - Which team chased down the biggest target in IPL history?
+
+
+  - intent: ask_highest_scores_teamwise
+    examples: |
+      - Highest scores by Chennai Super Kings
+      - Top totals made by Mumbai Indians
+      - Record scores for Kolkata Knight Riders
+      - Best batting performances by Royal Challengers Bangalore
+      - Highest team totals by Delhi Capitals
+      - What's the best score Punjab Kings ever made?
+      - Top 3 totals by Rajasthan Royals
+      - Highest innings scored by Sunrisers Hyderabad
+      - Gujarat Titans' best batting totals
+      - Lucknow Super Giants' highest innings scores
+      - What is MI’s highest team total in IPL?
+      - Which total is RCB’s highest team score?
+
+  - intent: ask_highest_scores
+    examples: |
+      - What are the highest team scores in IPL?
+      - Top batting totals in IPL history
+      - Record team scores in IPL matches
+      - Highest runs scored by a team in IPL
+      - 200+ team totals in IPL history
+      - Which team holds the record for highest IPL score?
+      - Show me top 5 highest team totals
+      - Teams that have scored above 230 runs
+      - Best batting performances by teams
+      - Record innings totals in IPL
+      - List the top 10 highest team scores in IPL history
+      - What is the record for the highest team innings score in IPL?
+
+  - intent: ask_highest_successful_run_chases
+    examples: |
+      - Best run chases by Sunrisers Hyderabad
+      - Highest successful chases team-wise
+      - Top run chase records for Mumbai Indians
+      - Most successful big chases in IPL history
+      - Teams with best record chasing 180+
+      - What's Chennai Super Kings' highest successful chase?
+      - When did RCB chase down a huge target?
+      - Kolkata Knight Riders' best run chases
+      - Successful 200+ chase by Punjab Kings
+      - Delhi Capitals' highest successful run pursuits
+      - Which IPL team holds the record for the highest successful chase?
+      - Top five highest run chases in IPL history
+
+  - intent: ask_ipl_points_table
+    examples: |
+      - Show IPL points table for 2023
+      - IPL standings in 2020 season
+      - Which team finished first in 2008?
+      - Points table positions for Chennai Super Kings across seasons
+      - Complete IPL league standings history
+      - Where did Mumbai Indians finish in 2021?
+      - Final standings of IPL 2022
+      - IPL points table for all seasons
+      - Team rankings at the end of 2019 season
+      - Which teams qualified for playoffs in 2017?
+      - Show the IPL standings for the 2021 season
+      - Which team finished last in IPL 2010?
+
+  - intent: ask_lowest_scores_ipl
+    examples: |
+      - What are the lowest team scores in IPL?
+      - Smallest totals in IPL history
+      - Teams bowled out for under 100 runs
+      - Worst batting performances by teams
+      - Lowest innings totals in IPL matches
+      - Which team has the record for lowest IPL score?
+      - Show me matches where teams scored under 80 runs
+      - Instances of teams getting all out cheaply
+      - Lowest totals defended successfully
+      - Record low scores in IPL history
+      - Which team has the lowest total ever in IPL?
+      - List matches where a team was all out for under 80 runs
+
+  - intent: ask_lowest_scores_teamwise
+    examples: |
+      - Lowest scores by Chennai Super Kings
+      - Worst batting performances of Mumbai Indians
+      - Smallest totals by Royal Challengers Bangalore
+      - Kolkata Knight Riders lowest innings scores
+      - Team-wise lowest scores in IPL history
+      - What's the lowest score Delhi Capitals ever made?
+      - Punjab Kings' worst batting collapses
+      - Sunrisers Hyderabad's lowest innings totals
+      - Rajasthan Royals' poorest batting displays
+      - Lowest totals team by team in IPL
+      - What is KKR’s lowest score in IPL history?
+      - Which team holds the record for the poorest lowest‑team score?
+
+  - intent: ask_one_sided_finish
+    examples: |
+      - Show matches with biggest victory margins
+      - Most one-sided matches in IPL history
+      - Biggest wins by runs in IPL
+      - Teams winning by 70+ runs
+      - Matches won by 10 or 9 wickets
+      - Which team has the largest victory margin?
+      - Most dominant wins in IPL history
+      - Games with largest run margins
+      - Matches decided by 100+ runs difference
+      - Biggest thrashings in IPL cricket
+      - Which match had the largest margin of victory in IPL?
+      - List the most one‑sided wins by runs in IPL
+
+  - intent: ask_top_partnerships_by_team
+    examples: |
+      - Top partnerships for Deccan Chargers
+      - Best batting pairs for Mumbai Indians
+      - Show Chennai Super Kings top partnerships
+      - Record partnerships for each team in IPL
+      - Team-wise best batting combinations
+      - Highest partnerships recorded by RCB
+      - KKR's best batting pairs by runs
+      - Delhi Capitals' most successful partnerships
+      - Punjab Kings' record batting stands
+      - Rajasthan Royals' top batting duos
+      - Record partnerships by DC in IPL history
+      - What is KKR’s highest partnership of all time?
+      
+# ------------------------------------------------------------------------------------------------------------------------
+
+  # Group 7: Team Performance Intents
+  - intent: ask_team_matches
+    examples: |
+      - Show me all matches played by CSK
+      - List all games of Royal Challengers Bangalore
+      - Mumbai Indians complete match history
+      - What matches did Rajasthan Royals play?
+      - KKR full match list
+      - All games featuring Sunrisers Hyderabad
+      - Delhi Capitals match history
+      - Punjab Kings entire match record
+      - List every match played by Gujarat Titans
+      - Lucknow Super Giants full match data
+      - All fixtures played by Chennai Super Kings
+      - Complete match list for Punjab Kings
+
+  - intent: ask_team_performance_against_opponent
+    examples: |
+      - How has CSK performed against MI?
+      - RCB performance against KKR over the years
+      - Show all matches between Delhi Capitals and Punjab Kings
+      - Sunrisers Hyderabad record versus Rajasthan Royals
+      - CSK vs RCB head to head stats
+      - Mumbai Indians record against Punjab Kings
+      - How does KKR fare against SRH?
+      - Gujarat Titans performance versus Lucknow Super Giants
+      - Delhi Capitals success rate against CSK
+      - RR matches against RCB with results
+      - Head-to-head record between RCB and SRH
+      - CSK vs GT win-loss summary
+
+  - intent: ask_team_performance_at_venue
+    examples: |
+      - How has Chennai Super Kings performed at Chepauk?
+      - KKR matches at Eden Gardens with results
+      - Performance of RCB at Chinnaswamy Stadium
+      - Delhi Capitals record at Feroz Shah Kotla
+      - Rajasthan Royals performance at Sawai Mansingh Stadium
+      - SRH stats at Rajiv Gandhi Stadium
+      - Punjab Kings record at Mohali
+      - Gujarat Titans at Narendra Modi Stadium
+      - Lucknow Super Giants at BRSABV Stadium
+      - MI performance at Dubai International Stadium
+      - KKR record at Bengaluru’s Chinnaswamy Stadium
+
+  - intent: ask_team_season_performance
+    examples: |
+      - How did CSK perform in 2018 season?
+      - Mumbai Indians full results in 2020
+      - Royal Challengers Bangalore performance in 2016
+      - KKR matches and results in 2014
+      - Sunrisers Hyderabad stats for 2016 season
+      - Delhi Capitals 2019 season summary
+      - Punjab Kings performance throughout 2017
+      - Rajasthan Royals 2022 season results
+      - Gujarat Titans debut season performance
+      - Lucknow Super Giants 2023 campaign
+      - RCB’s final standing in IPL 2017
+      - CSK season summary for 2019 IPL
+
+  - intent: ask_team_win_percentage
+    examples: |
+      - What is CSK's all-time win percentage?
+      - Win rate of Mumbai Indians in IPL history
+      - How often does RCB win their matches?
+      - Rajasthan Royals overall win percentage
+      - Which team has highest win rate in IPL?
+      - KKR's success rate across all seasons
+      - Delhi Capitals winning percentage
+      - Punjab Kings win ratio through IPL history
+      - SRH win percentage at home versus away
+      - Team with best winning percentage in playoffs
+      - Which franchise has the highest overall win ratio?
+      - MI’s career win percentage in IPL history
+
+  - intent: ask_head_to_head
+    examples: |
+      - Head to head between CSK and MI
+      - RCB vs KKR all-time statistics
+      - Compare Delhi Capitals and Punjab Kings records
+      - SRH against RR complete record
+      - MI vs CSK match history and results
+      - How many times has RCB defeated KKR?
+      - Full record of matches between Punjab and Delhi
+      - Rajasthan Royals versus Gujarat Titans stats
+      - CSK and SRH head to head comparison
+      - Mumbai Indians' record against all teams
+      - Compare win-loss between MI and RR
+      - Full head-to-head stats of DC vs PBKS
+
+  - intent: ask_most_successful_team
+    examples: |
+      - Which team has the best win percentage in IPL?
+      - Most successful IPL team by wins
+      - Highest winning percentage team in IPL
+      - Team with most match victories in IPL
+      - Most dominant team in IPL history
+      - Which franchise has won the most matches?
+      - Team with best playoff qualification record
+      - Franchise with highest win ratio in finals
+      - Most consistent team across all IPL seasons
+      - Which team has the most successful IPL record?
+      - Team with most IPL championships won
+      - Franchise with the best playoff qualification record
+
+  - intent: ask_team_results_by_year
+    examples: |
+      - Show me CSK results year by year
+      - Mumbai Indians performance across all seasons
+      - RCB yearly results from 2008 to present
+      - Year-wise performance of KKR in IPL
+      - Season-by-season record of Delhi Capitals
+      - Punjab Kings results for each IPL season
+      - Rajasthan Royals performance breakdown by year
+      - SRH year-by-year statistics
+      - Gujarat Titans results for each season played
+      - Lucknow Super Giants season-wise performance
+      - KKR’s year-by-year match outcomes
+      - RR performance breakdown season-wise
+
+  - intent: ask_team_home_away_performance
+    examples: |
+      - How does CSK perform at home versus away?
+      - Mumbai Indians home and away record
+      - RCB home vs away statistics
+      - KKR performance home versus away
+      - Delhi Capitals results at home compared to away games
+      - SRH win percentage at home versus on the road
+      - Punjab Kings home ground advantage analysis
+      - Rajasthan Royals away match performance
+      - Which teams perform better at home?
+      - Away match statistics for all IPL teams
+      - MI home vs away win comparison
+      - RCB away record across all seasons
+
+# ------------------------------------------------------------------------------------------------------------------------
+
+# Group 9: Team Performance by Ground and Opponent
+  - intent: ask_team_ground_performance
+    examples: |
+      - How does CSK perform at Chepauk?
+      - RCB performance at Chinnaswamy
+      - KKR match stats at Eden Gardens
+      - Mumbai Indians record at Wankhede Stadium
+      - SRH results at Rajiv Gandhi Stadium
+      - Delhi Capitals performance at Arun Jaitley Stadium
+      - Punjab Kings at Mohali ground statistics
+      - Rajasthan Royals at Sawai Mansingh Stadium
+      - Gujarat Titans performance at Narendra Modi Stadium
+      - CSK record at Brabourne Stadium
+      - SRH record at M Chinnaswamy Stadium
+      - Delhi Capitals stats at Arun Jaitley Stadium
+
+  - intent: ask_team_opponent_record
+    examples: |
+      - CSK record against MI
+      - How has RCB performed against KKR?
+      - Delhi Capitals vs Punjab Kings stats
+      - SRH record when playing RR
+      - Mumbai Indians performance against Chennai Super Kings
+      - Kolkata Knight Riders against Royal Challengers Bangalore
+      - Punjab Kings versus Delhi Capitals history
+      - Rajasthan Royals record facing Sunrisers Hyderabad
+      - Gujarat Titans against Lucknow Super Giants
+      - CSK head-to-head with RCB
+      - CSK vs MI overall record
+      - KKR performance against SRH all-time
+
+  - intent: ask_team_overall_record
+    examples: |
+      - CSK overall performance record
+      - Mumbai Indians win-loss stats across all grounds
+      - RCB total match statistics
+      - Overall record of KKR
+      - Delhi Capitals complete performance history
+      - SRH win-loss record across all seasons
+      - Punjab Kings overall statistics in IPL
+      - Rajasthan Royals cumulative performance
+      - Gujarat Titans full history record
+      - Lucknow Super Giants overall match data
+      - Mumbai Indians cumulative win-loss
+      - RCB overall IPL statistics
+
+  - intent: ask_team_home_ground_record
+    examples: |
+      - CSK home ground record
+      - Mumbai Indians performance at home
+      - How does RCB play at their home ground?
+      - KKR home match statistics
+      - Delhi Capitals record at home venue
+      - SRH performance at their home ground
+      - Punjab Kings home match results
+      - Rajasthan Royals stats at home
+      - Gujarat Titans record at home stadium
+      - Lucknow Super Giants home ground performance
+      - CSK home ground win-loss record
+      - DC performance at their home venue
+
+  - intent: ask_team_performance_by_opponent
+    examples: |
+      - CSK performance against all opponents
+      - How has Mumbai Indians played against different teams?
+      - RCB record against each IPL team
+      - KKR results by opponent
+      - Delhi Capitals statistics versus each franchise
+      - SRH performance breakdown by opponent
+      - Punjab Kings record against all teams
+      - Rajasthan Royals against every IPL team
+      - Gujarat Titans winning percentage by opponent
+      - Lucknow Super Giants record team-by-team
+      - RR record against every IPL team
+      - GT win percentage vs each opponent
+
+  - intent: ask_team_no_result_matches
+    examples: |
+      - CSK matches with no result
+      - No result games for Mumbai Indians
+      - RCB abandoned matches
+      - KKR games without a result
+      - Delhi Capitals matches affected by rain
+      - SRH washed out games
+      - Punjab Kings matches with no outcome
+      - Rajasthan Royals abandoned fixtures
+      - List of all no-result IPL matches
+      - Teams with most abandoned games
+      - List of no-result games for DC
+      - Teams with most washed-out IPL matches
+
+  - intent: ask_head_to_head_by_ground
+    examples: |
+      - CSK vs MI at Chepauk
+      - RCB against KKR at Chinnaswamy
+      - Delhi vs Punjab at Kotla
+      - Head to head between SRH and RR at Hyderabad
+      - Mumbai Indians versus CSK at Wankhede
+      - KKR against RCB at Eden Gardens
+      - Punjab Kings vs Delhi Capitals at Mohali
+      - RR versus SRH at Jaipur
+      - CSK against RCB at Chepauk statistics
+      - MI vs DC at Mumbai record
+      - MI vs CSK at Wankhede Stadium
+      - RCB vs KKR at Eden Gardens
+
+  - intent: ask_most_dominant_team_at_venue
+    examples: |
+      - Which team has the best record at Chepauk?
+      - Most successful team at Wankhede
+      - Team with highest win rate at Eden Gardens
+      - Who dominates at Chinnaswamy Stadium?
+      - Best performing team at Feroz Shah Kotla
+      - Most wins at Rajiv Gandhi Stadium
+      - Team with highest success rate at Mohali
+      - Who has best record at Brabourne Stadium?
+      - Most dominant franchise at DY Patil Stadium
+      - Team with highest win percentage at Narendra Modi Stadium
+      - Franchise with best win rate at Chepauk
+      - Team dominating at Feroz Shah Kotla
+
+# ------------------------------------------------------------------------------------------------------------------------
+
+# Group 3: Player Performance Intents
+  - intent: ask_player_impact_by_season
+    examples: |
+      - Who had the greatest impact in IPL 2008?
+      - Tell me about player impact in 2011-2013
+      - Which player scored the most runs in 2020?
+      - Show me the players with highest strike rate in 2023
+      - Who contributed most to their team in 2014-2016?
+      - Top batsmen from 2017-2019
+      - Mumbai Indians best performers in 2020-2022
+      - Players with most fifties in IPL 2008-2010
+      - Best batting averages in 2023-2024
+      - Highest wicket-takers in IPL 2019
+      - Who hit the most sixes in 2015-2017?
+      - Chennai Super Kings key players in 2010-2012
+      - Most valuable players of IPL 2022
+      - Top run-scorer in IPL 2010 season
+      - Leading wicket-taker in IPL 2018
+
+  - intent: ask_wicketkeeper_highest_scores
+    examples: |
+      - Which wicketkeeper has the highest score in IPL?
+      - Tell me about top scores by wicketkeepers
+      - Who scored the most runs as a wicketkeeper in a single match?
+      - Highest individual score by a wicketkeeper in IPL
+      - Did Dhoni score any centuries as wicketkeeper?
+      - Wicketkeeper's best batting performances
+      - Rishabh Pant's highest score as wicketkeeper
+      - Has any wicketkeeper scored 100 in IPL?
+      - Top 5 scores by wicketkeepers in IPL
+      - Dinesh Karthik's best innings as keeper
+      - Highest score by Quinton de Kock as keeper
+      - KL Rahul's top score while keeping wickets
+      - Highest IPL score by a wicketkeeper
+      - Top 5 wicketkeeper innings in IPL history
+
+  - intent: ask_wicketkeeper_most_dismissals_innings
+    examples: |
+      - Most dismissals by a wicketkeeper in an IPL match
+      - Which wicketkeeper has the most catches in a single game?
+      - Tell me about wicketkeepers with most stumpings in one match
+      - Highest number of dismissals in an innings by a keeper
+      - Did Dinesh Karthik have many dismissals in a game?
+      - Wicketkeeper with most catches and stumpings combined
+      - Has any keeper taken 5 dismissals in an IPL match?
+      - MS Dhoni's highest dismissals in a game
+      - Most stumpings by a keeper in one IPL match
+      - Wriddhiman Saha's best performance behind stumps
+      - Keeper with record number of catches in a match
+      - Ishan Kishan dismissals record in a single game
+      - Keeper with most dismissals in one match
+      - Record stumpings by a wicketkeeper in IPL
+
+  - intent: ask_wicketkeeper_overall_records
+    examples: |
+      - Who is the best wicketkeeper in IPL history?
+      - Wicketkeeper with most dismissals overall
+      - Tell me about Dhoni's wicketkeeping record
+      - Top wicketkeepers by dismissals per match
+      - Which keeper has the most stumpings in IPL?
+      - Wicketkeepers with both good batting and keeping stats
+      - Robin Uthappa's total dismissals in IPL
+      - Keeper with highest career dismissals
+      - Most successful wicketkeepers in IPL history
+      - Quinton de Kock's wicketkeeping statistics
+      - Dinesh Karthik career dismissals in IPL
+      - Wicketkeepers ranked by total catches
+      - Total career dismissals by MS Dhoni
+      - All-time leading IPL wicketkeeping record
+
+  - intent: nlu_fallback
+    examples: |
+      - blah blah
+      - xyz
+      - tell me something else
+      - I don't know
+      - whatever
+      - random text
+      - asdfghjkl
+      - not related to cricket
+      - talk about movies
+      - what's the weather like?
+      - can you help me with something else?
+      - this is nonsense text
+      - blah blah blah
+      - lorem ipsum
+      - gibberish text

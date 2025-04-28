@@ -1,0 +1,124 @@
+{
+  "pageProps": {
+    "isSuggestionsFetched": true,
+    "parsedData": {
+      "query": "What was the result of the match between CSK and MI",
+      "scrappedData": {
+        "data": {
+          "cmpData": {
+            "template": "Card-CardGrid",
+            "type": "Team",
+            "parsedData": [
+              {
+                "Name": "Chennai Super Kings",
+                "Units": "Mat",
+                "Value": "38",
+                "subText": "Team",
+                "IconPath": "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/313400/313421.logo.png",
+                "Details": {
+                  "Span ": "2008-2025",
+                  "Won ": "18",
+                  "Lost ": "20",
+                  "Tied ": "0",
+                  "NR ": "0",
+                  "W/L ": "0.900",
+                  "Ave ": "25.38",
+                  "RPO ": "8.04",
+                  "Inns ": "38",
+                  "HS ": "218",
+                  "LS ": "79"
+                }
+              }
+            ]
+          },
+          "dbCalls": {
+            "name": "4_DB_Images",
+            "time": 1.214441,
+            "words": "1.21 ms",
+            "preciseWords": "1.214441 ms",
+            "verboseWords": "1 millisecond 214 microseconds 441 nanoseconds"
+          },
+          "tableHeaders": [
+            "Team",
+            "Span",
+            "Mat",
+            "Won",
+            "Lost",
+            "Tied",
+            "NR",
+            "W/L",
+            "Ave",
+            "RPO",
+            "Inns",
+            "HS",
+            "LS",
+            ""
+          ]
+        },
+        "logs": {
+          "2_GET_HTML_RESULT": 1568.763372,
+          "4_DB_Images": 1.214441,
+          "3_SCRAPPING_HTML": 74.924043,
+          "1_Query_Result": 1699.848533
+        },
+        "status": 200,
+        "filtersData": "Opposition: Mumbai Indians, Sorted by: Matches, Team: Chennai Super Kings, Tournament: IPL"
+      },
+      "tournament": "ipl"
+    },
+    "staticSuggestionsData": {
+      "mode": "",
+      "query_string": "What was the result of the match between CSK and MI",
+      "top_suggestions": [
+        "how many times have Chennai Super Kings played Mumbai Indians",
+        "Ravichandran Ashwin against Chennai Super Kings in IPL",
+        "Travis Head record for Chennai Super Kings",
+        "instances of 50 plus score and three wickets by a player in a match"
+      ],
+      "top_autocomplete": [],
+      "editorials": {
+        "IPL 2024": [
+          "Which batter hit the most sixes in IPL 2024?",
+          "Among batting pairs with at least 300 runs, which one had the best run rate in IPL 2024?",
+          "Which team had the best economy rate in the Powerplays in IPL 2024?"
+        ],
+        "T20I World Cup": [
+          "Who has hit the most sixes in T20 World Cup 2024?",
+          "Which Indian bowler took the most wickets in the T20 World Cup 2024?",
+          "Which batter has the best strike rate in T20 World Cup 2024 min 50 balls?"
+        ],
+        "Men's ODIs": [
+          "What is the highest score by a No. 4 batter in men's ODIs?",
+          "What is Virat Kohli's batting average against Mitchell Starc in ODIs?",
+          "Who has scored the most runs in a single edition of the men's ODI World Cup?"
+        ],
+        "T20Is/ Women's T20Is": [
+          "Who has scored the most runs in a calendar year in men's T20Is?",
+          "What is the highest partnership in women's T20 internationals?",
+          "What is the highest target chased successfully in men's T20Is?"
+        ]
+      },
+      "examples": [
+        "how many times have Chennai Super Kings played Mumbai Indians",
+        "Ravichandran Ashwin against Chennai Super Kings in IPL",
+        "Travis Head record for Chennai Super Kings",
+        "instances of 50 plus score and three wickets by a player in a match"
+      ]
+    },
+    "analytics": {
+      "attributes": {
+        "page_name": "results",
+        "content_type": "nlp",
+        "league": "no-league"
+      }
+    },
+    "device": {
+      "isMobile": false,
+      "isDesktop": true
+    },
+    "ads": {
+      "page": "askResult"
+    }
+  },
+  "__N_SSP": true
+}
